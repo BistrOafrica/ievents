@@ -1,0 +1,201 @@
+body {
+    font-family: $body-font;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    @include media-breakpoint-down(md) {
+		font-size: 28px;
+    }
+    @include media-breakpoint-down(sm) {
+		font-size: 28px;
+    }
+    &.section-title {
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 0 $spacing-lg 0;
+    }
+}
+
+h2 {
+	@include media-breakpoint-down(xs) {
+		font-size: 24px;
+	}
+}
+
+h3 {
+	@include media-breakpoint-down(xs) {
+		font-size: 18px;
+	}
+}
+
+.btn {
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    margin: $spacing 0;
+}
+
+#search-btn {
+    border:none !important;
+    background: none !important;
+}
+
+.section {
+    padding: 100px 0;
+    @include media-breakpoint-down(xs) {
+        padding: 60px 0;
+    }
+}
+
+.contact-cta {
+    color: $white;
+    padding: $spacing-xxl;
+    background: $nbe-gray;
+}
+.section-who {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(xs) {
+        display: block;
+    }
+    .about-text {
+        background: $white;
+        position: relative;
+        z-index: 2;
+        padding: $spacing-xl $spacing-xl $spacing-xl 0;
+        @include media-breakpoint-up(md) {
+            margin-right: -100px;
+            max-width: 500px;
+            float: right;
+        }
+        h1 {
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 0 0 $spacing-lg 0;
+        }
+        @include media-breakpoint-down(xs) {
+            padding: $spacing-lg;
+            margin: 0 auto;
+        }
+    }
+    .about-img {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.product-section {
+    .product {
+        height: 100%;
+        margin-bottom: $spacing-xxl;
+        .product-item {
+            height: 100%;
+            a {
+                display: inline-block;
+            }
+            &.woocommerce {
+                .pi-img-wrapper {
+                    max-height: 300px;
+                    height: 300px;
+                    text-align: center;
+                    img {
+                        height: 100%;
+                    }
+                    @include media-breakpoint-up(md) {
+                        height: 200px;
+                    }
+                }
+                .entry-title {
+                    color: $nbe-dark;
+                    font-weight: 300;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                }
+                .pi-price {
+                    color: $nbe-dark;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                }
+                .pi-rating {
+                    float: left;
+                    padding: $spacing 0;
+                }
+            }
+        }
+    }
+}
+
+.logo-section {
+    .logo-carousel {
+        .client-logo {
+            padding: $spacing-sm;
+        }
+    }
+}
+
+.section-services {
+    padding: $spacing-xxl 0;
+	.single-service {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+		.service-icon {
+			img {
+                width: 64px;
+				min-width: 64px;
+			}
+		}
+		.service-desc {
+            padding-left: $spacing-md;
+            .title {
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 1.8em;
+			}
+			.description {
+				margin-bottom: 22px;
+				font-size: 14px;
+				line-height: 1.8em;
+			}
+			a {
+				color: #fff;
+				font-size: 14px;
+				text-decoration: none;
+				i {
+					margin-right: 10px;
+					color: #f70037;
+				}
+			}
+		}
+	}
+}
+
+.category-section {
+    display: flex;
+    justify-content: center;
+    .category {
+        background-color: $nbe-grey;
+        margin-bottom: $spacing-lg;
+        .category-inner {
+            padding: $spacing-lg;
+            min-height: 350px;
+            word-wrap: break-word;
+        }
+        .category-image {
+            margin-top: $spacing-lg;
+            max-height: 200px;
+            overflow: hidden;
+        }
+    }
+}
+
+
+
+
