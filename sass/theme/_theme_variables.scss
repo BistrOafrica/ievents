@@ -3,14 +3,16 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 
-$primary: #F15A24; 
+$primary: #1D9FDB;
 
-$nbe-blue: #03455C;
-$nbe-dark: #1D1F22;
-$nbe-lightblue: #11ADE2;
-$nbe-green: #70B044;
-$nbe-gray: #72757E;
-$nbe-grey: #F0EFEF;
+
+$ievents-pink: #E8395A;
+$ievents-pinker: #ce1335;
+$ievents-dark: #3D4146;
+$ievents-lightblue: #11ADE2;
+$ievents-green: #70B044;
+$ievents-gray: #72757E;
+$ievents-grey: #F0EFEF;
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -18,14 +20,14 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
+$gray-600: #868e96 !default; 
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$body-font: 'Raleway', sans-serif;
-
+$body-font: 'Swis721 Lt BT', sans-serif;
+$bold-font: 'Swis721 BT', sans-serif;
 $shadow: hsla(200, 20%, 20%, 0.25);
 $cutout-size: 1rem;
 

@@ -1,5 +1,5 @@
 .footer-top {
-    background: $nbe-grey !important;
+    background: $ievents-grey !important;
     .footer-widget {
         margin-bottom: $spacing-lg;
         .widget-title {
@@ -16,7 +16,7 @@
             justify-content: flex-start;
             .nav-link {
                 padding: $spacing 0;
-                color: $nbe-dark;
+                color: $ievents-dark;
                 &:hover {
                     color: $primary;
                 }
@@ -26,5 +26,5 @@
 }
 
 .footer-bottom {
-    background: $nbe-grey !important;
+    background: $ievents-grey !important;
 }

@@ -34,7 +34,7 @@ if ( post_password_required() ) {
 			if ( 1 === (int) $comments_number ) {
 				printf(
 					/* translators: %s: post title */
-					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'nbe' ),
+					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'ievents' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
@@ -61,17 +61,17 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-above">
 
-				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'nbe' ); ?></h1>
+				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'ievents' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
-						<?php previous_comments_link( __( '&larr; Older Comments', 'nbe' ) ); ?>
+						<?php previous_comments_link( __( '&larr; Older Comments', 'ievents' ) ); ?>
 					</div>
 				<?php } ?>
 
 				<?php	if ( get_next_comments_link() ) { ?>
 					<div class="nav-next">
-						<?php next_comments_link( __( 'Newer Comments &rarr;', 'nbe' ) ); ?>
+						<?php next_comments_link( __( 'Newer Comments &rarr;', 'ievents' ) ); ?>
 					</div>
 				<?php } ?>
 
@@ -96,17 +96,17 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-below">
 
-				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'nbe' ); ?></h1>
+				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'ievents' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
-						<?php previous_comments_link( __( '&larr; Older Comments', 'nbe' ) ); ?>
+						<?php previous_comments_link( __( '&larr; Older Comments', 'ievents' ) ); ?>
 					</div>
 				<?php } ?>
 
 				<?php	if ( get_next_comments_link() ) { ?>
 					<div class="nav-next">
-						<?php next_comments_link( __( 'Newer Comments &rarr;', 'nbe' ) ); ?>
+						<?php next_comments_link( __( 'Newer Comments &rarr;', 'ievents' ) ); ?>
 					</div>
 				<?php } ?>
 

@@ -19,7 +19,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="//db.onlinewebfonts.com/c/ff21985e04861bb8d9745440ee1e2e7d?family=Swis721+Lt+BT" rel="stylesheet" type="text/css"/>
+	<link href="//db.onlinewebfonts.com/c/d97281294b63b449a93162fccd6121ec?family=Swis721+BT" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
@@ -30,46 +31,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
-
+<div class="top-bar-line"></div>
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar">
 
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'nbe' ); ?></a>
-
-		<div class="top-nav">
-			<div class="container">
-				<div class="row">
-					<div class="col-10">
-						<?php
-
-
-						wp_nav_menu(
-							array(
-								'theme_location'  => 'topmenu',
-								'menu_class'      => 'navbar-top',
-								'menu_id'         => 'top-menu',
-							)
-						);
-						?>
-					</div>
-					<div class="col-2">
-						<div class="switch-lang">
-							<div class="current-lang"><img class="lang-flag" src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/128/Flag_of_United_Kingdom.png" />
-							</div>
-							<div class="lang-dropdown">
-								<div class="selecting-lang"><img class="lang-flag" src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/128/Flag_of_France.png" />
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'ievents' ); ?></a>
 
 		<nav id="main-nav" class="navbar navbar-expand-sm navbar-light" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
-				<?php esc_html_e( 'Main Navigation', 'nbe' ); ?>
+				<?php esc_html_e( 'Main Navigation', 'ievents' ); ?>
 			</h2>
 			
 
@@ -82,19 +53,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<!-- Your site title as branding in the menu -->
 							<?php if ( ! has_custom_logo() ) { ?>
+								<h1 class="logo-title">ievents</h1>
 
 							<?php } else {
 							the_custom_logo();
 							} ?><!-- end custom logo -->
 						
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'nbe' ); ?>">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'ievents' ); ?>">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 					</div>
 					
 
 						
-					<div class="col-lg-5 col-md-9">
+					<div class="col-lg-5 col-md-9 nav-items">
 						<!-- The WordPress Menu goes here -->
 						<?php
 						wp_nav_menu(
@@ -111,34 +83,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<div class="col-lg-3 col-md-6">
-						<form  role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="search-form form-inline my-2 my-lg-0">
-
-							<input type="text" id="box" name="s" placeholder="Rechercher un produit..." class="search-box">
-							<button type="submit" id="search-btn" class="btn search-icon"><span class="material-icons">search</span></button>
-						</form>
-
-					</div>
+					<a class="nav-btn btn btn-primary" href="#"><p class="btn-text">Contactez-Nous</P></a>
 					
-					<div class="col-lg-2 col-md-6">
-						<ul class="user-menu navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo esc_url(home_url('/my-account')); ?>">
-									<span class="material-icons">person</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo esc_url(home_url('/shop')); ?>">
-									<span class="material-icons">favorite</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?php echo esc_url(home_url('/cart')); ?>">
-									<span class="material-icons">shopping_cart</span>
-								</a>
-							</li>
-						</ul>
-					</div>
 				</div>
 			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->

@@ -39,9 +39,9 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_section(
 			'understrap_theme_layout_options',
 			array(
-				'title'       => __( 'Theme Layout Settings', 'nbe' ),
+				'title'       => __( 'Theme Layout Settings', 'ievents' ),
 				'capability'  => 'edit_theme_options',
-				'description' => __( 'Container width and sidebar defaults', 'nbe' ),
+				'description' => __( 'Container width and sidebar defaults', 'ievents' ),
 				'priority'    => apply_filters( 'understrap_theme_layout_options_priority', 160 ),
 			)
 		);
@@ -81,14 +81,14 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_container_type',
 				array(
-					'label'       => __( 'Container Width', 'nbe' ),
-					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'nbe' ),
+					'label'       => __( 'Container Width', 'ievents' ),
+					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'ievents' ),
 					'section'     => 'understrap_theme_layout_options',
 					'settings'    => 'understrap_container_type',
 					'type'        => 'select',
 					'choices'     => array(
-						'container'       => __( 'Fixed width container', 'nbe' ),
-						'container-fluid' => __( 'Full width container', 'nbe' ),
+						'container'       => __( 'Fixed width container', 'ievents' ),
+						'container-fluid' => __( 'Full width container', 'ievents' ),
 					),
 					'priority'    => apply_filters( 'understrap_container_type_priority', 10 ),
 				)
@@ -110,7 +110,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				$wp_customize,
 				'understrap_sidebar_position',
 				array(
-					'label'             => __( 'Sidebar Positioning', 'nbe' ),
+					'label'             => __( 'Sidebar Positioning', 'ievents' ),
 					'description'       => __(
 						'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
 						'understrap'
@@ -120,10 +120,10 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'type'              => 'select',
 					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
 					'choices'           => array(
-						'right' => __( 'Right sidebar', 'nbe' ),
-						'left'  => __( 'Left sidebar', 'nbe' ),
-						'both'  => __( 'Left & Right sidebars', 'nbe' ),
-						'none'  => __( 'No sidebar', 'nbe' ),
+						'right' => __( 'Right sidebar', 'ievents' ),
+						'left'  => __( 'Left sidebar', 'ievents' ),
+						'both'  => __( 'Left & Right sidebars', 'ievents' ),
+						'none'  => __( 'No sidebar', 'ievents' ),
 					),
 					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 20 ),
 				)

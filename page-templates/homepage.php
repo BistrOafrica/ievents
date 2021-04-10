@@ -27,12 +27,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					if ( is_front_page() ) {
 						get_template_part( 'global-templates/hero-header' );
-						get_template_part( 'global-templates/brands' ); 
-						get_template_part( 'global-templates/bestsellers' );
-						get_template_part( 'global-templates/who' ); 
+						get_template_part( 'global-templates/carousel');
 						get_template_part( 'global-templates/contact' ); 
 
 					}else{
+						
 
 
 						while ( have_posts() ) {

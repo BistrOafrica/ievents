@@ -769,14 +769,14 @@ msgstr "Layout der Beiträge auf der Startseite"
 #, php-format
 msgid "based on %s customer rating"
 msgid_plural "based on %s customer ratings"
-msgstr[0] "basierend auf %s Kundenbewertungen"
-msgstr[1] "basierend auf %s Kundenbewertungen"
+msgstr[0] "basierend auf %s Kundeieventswertungen"
+msgstr[1] "basierend auf %s Kundeieventswertungen"
 
 #: woocommerce/single-product/rating.php:42
 #, php-format
 msgid "%s customer review"
 msgid_plural "%s customer reviews"
-msgstr[0] "%s Kundenbewertung"
+msgstr[0] "%s Kundeieventswertung"
 msgstr[1] "%s Kunden Bewertungen"
 
 #. Name of the theme

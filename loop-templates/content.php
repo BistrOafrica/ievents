@@ -39,7 +39,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'nbe' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'ievents' ),
 				'after'  => '</div>',
 			)
 		);

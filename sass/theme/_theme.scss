@@ -18,9 +18,12 @@ h1 {
         padding: 0 0 $spacing-lg 0;
     }
 }
-
+.logo-title{
+    color: $primary;
+    ;
+}
 h2 {
-	@include media-breakpoint-down(xs) {
+	@include media-breakpoint-down(xs) { 
 		font-size: 24px;
 	}
 }
@@ -32,19 +35,29 @@ h3 {
 }
 
 .btn {
+    font-family: $bold-font;
+    width: 200px;
+    height:50;
+    border: none!important;
     border-radius: 0;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 120%;
-    text-transform: uppercase;
-    padding: 16px 32px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: capitalize!important;
+    padding: 12px 24px;
     margin: $spacing 0;
+    color: $white;
+    background-color: $ievents-pink;
+    box-shadow: 0px 4px 16px rgba(255, 87, 34, 0.32);
+    .btn-text{
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+.btn:hover{
+    background-color: $ievents-pinker!important;
 }
 
-#search-btn {
-    border:none !important;
-    background: none !important;
-}
 
 .section {
     padding: 100px 0;
@@ -56,7 +69,7 @@ h3 {
 .contact-cta {
     color: $white;
     padding: $spacing-xxl;
-    background: $nbe-gray;
+    background: $ievents-gray;
 }
 .section-who {
     display: flex;
@@ -112,13 +125,13 @@ h3 {
                     }
                 }
                 .entry-title {
-                    color: $nbe-dark;
+                    color: $ievents-dark;
                     font-weight: 300;
                     font-size: 18px;
                     text-transform: capitalize;
                 }
                 .pi-price {
-                    color: $nbe-dark;
+                    color: $ievents-dark;
                     font-size: 18px;
                     text-transform: capitalize;
                 }
@@ -181,7 +194,7 @@ h3 {
     display: flex;
     justify-content: center;
     .category {
-        background-color: $nbe-grey;
+        background-color: $ievents-grey;
         margin-bottom: $spacing-lg;
         .category-inner {
             padding: $spacing-lg;

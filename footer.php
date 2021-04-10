@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						&copy; <?php echo date("Y"); ?> New Business Europ
+						&copy; <?php echo date("Y"); ?> ievents 
 
 					</div><!-- .site-info -->
 

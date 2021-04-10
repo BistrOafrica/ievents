@@ -8,11 +8,11 @@
             text-transform: capitalize;
 		}
 		p.price {
-			color: $nbe-dark;
+			color: $ievents-dark;
 			font-size: 1.25em;
 		}
 		span.price {
-			color: $nbe-dark;
+			color: $ievents-dark;
 			font-size: 1.25em;
         }
         form.cart {
@@ -23,7 +23,7 @@
                     line-height: 120%;
                     border-radius: 0;
                     border: 0;
-                    background: $nbe-grey;
+                    background: $ievents-grey;
                     font-weight: 600;
                     margin: 10px 0;
                     text-transform: uppercase;
@@ -43,14 +43,14 @@
         li.product {
             .woocommerce-loop-product__link {
                 .woocommerce-loop-product__title {
-                    color: $nbe-dark;
+                    color: $ievents-dark;
                     font-weight: 300;
                     font-size: 18px;
                     text-transform: capitalize;
                 }
             }
             .price {
-                color: $nbe-dark;
+                color: $ievents-dark;
                 font-size: 18px;
                 text-transform: capitalize;
             }
