@@ -13,7 +13,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
-		<br/>
 		<div class="row hero-row">
 			<div class="col-12 col-md-8 col1">
 				<p class="sm-title">Introduction</p><div class="sm-title-dash"></div>

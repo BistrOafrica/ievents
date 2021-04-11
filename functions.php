@@ -78,7 +78,7 @@ function customize_homepage() {
     add_menu_page( '','Homepage', '','landing', '','dashicons-welcome-widgets-menus', 90);  
     add_submenu_page('landing','Slider', 'Slider','manage_options','setup_slider','setup_slider');
     add_submenu_page('landing','Services', 'Services','manage_options','services','services');
-    add_submenu_page('landing','Brands', 'Brands','manage_options','brands','brands');
+    add_submenu_page('landing','Partners', 'Partners','manage_options','Partners','Partners');
     add_submenu_page('landing','Who we are', 'Who we are','manage_options','who_we_are','who_we_are');
 }
 
@@ -414,7 +414,7 @@ function services(){
 
 }
 
-function brands(){
+function Partners(){
     ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -543,6 +543,25 @@ function brands(){
         ?>
             
         <input type="file" name="brand_img_5" value="" class="form-control" autocomplete="off">
+        <div class="form-control-focus"> </div>
+          
+        </div>      
+       
+
+    </fieldset>
+</div>
+
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Brand 6</legend>
+        <div class="form-group form-md-line-input">
+            <label class="control-label">Image</label>
+        <?php
+        if(get_option('brand_img_6')!="")
+        echo "<img src='". get_option('brand_img_6')."' style='margin:auto;width:100%'/>";
+        ?>
+            
+        <input type="file" name="brand_img_6" value="" class="form-control" autocomplete="off">
         <div class="form-control-focus"> </div>
           
         </div>      

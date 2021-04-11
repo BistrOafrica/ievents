@@ -28,8 +28,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					if ( is_front_page() ) {
 						get_template_part( 'global-templates/hero-header' );
 						get_template_part( 'global-templates/carousel');
-						get_template_part( 'global-templates/contact' ); 
+						get_template_part( 'global-templates/services' ); 
+						get_template_part( 'sidebar-templates/sidebar', 'actualites' );
+						get_template_part( 'global-templates/partners' );
+						get_template_part( 'sidebar-templates/sidebar', 'community' );
 
+						
 					}else{
 						
 
@@ -56,5 +60,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #full-width-page-wrapper -->
 
-<?php
-get_footer();
+<?php get_template_part( 'sidebar-templates/sidebar', 'prefooter' ); ?>
+<?php 
+	get_footer();
+?>

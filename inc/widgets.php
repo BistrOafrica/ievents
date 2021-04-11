@@ -100,13 +100,13 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 	function understrap_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'ievents' ),
-				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'ievents' ),
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
+				'name'          => __( 'Pre Footer', 'ievents' ),
+				'id'            => 'prefooter',
+				'description'   => __( 'prefooter widget area', 'ievents' ),
+				'before_widget' => '<div id="%1$s" class="prefooter-widget %2$s dynamic-classes">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h1 class="section-title">',
+				'after_title'   => '</h1>',
 			)
 		);
 
@@ -167,6 +167,28 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'actualites', 'ievents' ),
+				'id'            => 'actualites',
+				'description'   => __( 'actualites Gallery', 'ievents' ),
+				'before_widget' => '<div id="%1$s" class="actualites-widget %2$s dynamic-classes">',
+				'after_widget'  => '</div><!-- actualites-widget -->',
+				'before_title'  => '<div class="row"><h1 class="section-title">',
+				'after_title'   => '</h1></div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Community', 'ievents' ),
+				'id'            => 'community',
+				'description'   => __( 'Community Gallery', 'ievents' ),
+				'before_widget' => '<div id="%1$s" class="community-widget %2$s dynamic-classes">',
+				'after_widget'  => '</div><!-- .community-widget -->',
+				'before_title'  => '<div class="row"><h1 class="section-title">',
+				'after_title'   => '</h1></div>',
 			)
 		);
 

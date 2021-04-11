@@ -1,4 +1,6 @@
-
+.owl-nav{
+    visibility: hidden;
+}
 .top-nav {
     height: 40px;
     background: $ievents-grey;
@@ -97,7 +99,7 @@
         padding: $spacing;
         border-radius: 0 0 $spacing-xs $spacing-xs;
         img {
-            width: 100px;
+            width: 100%;
         }
     }
     .header-bar {

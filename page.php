@@ -53,5 +53,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #page-wrapper -->
 
-<?php
-get_footer();
+<?php get_template_part( 'sidebar-templates/sidebar', 'prefooter' ); ?>
+<?php 
+	get_footer();
+?>
