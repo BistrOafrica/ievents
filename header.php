@@ -50,8 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php endif; ?>
 				
 				<div class="row header-bar">
-					<div class="col-lg-2 col-md-3 logo-bar">
-
+					<div class="col-md-2 col-5 logo-bar">
 							<!-- Your site title as branding in the menu -->
 							<?php if ( ! has_custom_logo() ) { ?>
 								<h1 class="logo-title">ievents</h1>
@@ -59,15 +58,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php } else {
 							the_custom_logo();
 							} ?><!-- end custom logo -->
-						
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'ievents' ); ?>">
-							<span class="navbar-toggler-icon"></span>
-						</button>
 					</div>
-					
+	
+					<div class="col-md-7 col-5 nav-items">
 
-						
-					<div class="col-lg-5 col-md-9 nav-items">
 						<!-- The WordPress Menu goes here -->
 						<?php
 						wp_nav_menu(
@@ -84,7 +78,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						);
 						?>
 					</div>
-					<a class="nav-btn btn btn-primary" href="#"><p class="btn-text">Contactez-Nous</P></a>
+					<div class="col-md-3 col-2">
+					<a class="nav-btn btn btn-primary" href="#">Contactez-Nous</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'ievents' ); ?>">
+							<span class="navbar-toggler-icon"></span>
+					</button>
+					</div>
 					
 				</div>
 			<?php if ( 'container' === $container ) : ?>
