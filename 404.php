@@ -85,6 +85,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #content -->
 
 </div><!-- #error-404-wrapper -->
-
+<?php get_template_part( 'sidebar-templates/sidebar', 'prefooter' ); ?>
 <?php
 get_footer();
+?>

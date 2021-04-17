@@ -191,6 +191,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'after_title'   => '</h1></div>',
 			)
 		);
+		
 
 	}
 } // End of function_exists( 'understrap_widgets_init' ).

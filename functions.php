@@ -765,3 +765,36 @@ function who_we_are(){
 
 
 }
+function wpb_login_logo() { ?>
+    <style type="text/css">
+    .login {
+        background: #fff;
+    }
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_template_directory_uri(); ?>/img/logo.png);
+            height:150px;
+            width:300px;
+            max-width:320px;
+            background-size:200px auto;
+            background-position:center;
+            background-repeat: no-repeat;
+            padding: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'wpb_login_logo' );
+
+function wpb_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'wpb_login_logo_url' );
+ 
+function wpb_login_logo_url_title() {
+    return 'ievents';
+}
+add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );
+
+
+function service_section(){
+    
+}
