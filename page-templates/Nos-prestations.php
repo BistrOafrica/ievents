@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
-					<?php get_template_part( 'global-templates/hero-header' ); ?>
+                <div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
                     <div class="row hero-row">
 			            <div class="col-12 col-md-8 col1">
                             <p class="sm-title">Nos Prestations</p><div class="sm-title-dash"></div>
@@ -33,6 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim</p>
 				        </div>
 		            </div>
+                    <?php get_template_part( 'global-templates/hero' ); ?>
 
 				</main><!-- #main -->
 
