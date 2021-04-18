@@ -33,7 +33,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim</p>
 				        </div>
 		            </div>
-                    <?php get_template_part( 'global-templates/hero' ); ?>
 				</main><!-- #main -->
 
 			</div><!-- #primary -->

@@ -798,3 +798,27 @@ add_filter( 'login_headertitle', 'wpb_login_logo_url_title' );
 function service_section(){
     
 }
+function lay_featured_image() {
+    
+    if ( is_singular() ) {
+
+        $id = get_queried_object_id ();
+
+        
+        if ( has_post_thumbnail( $id ) ) {
+
+            
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' );
+
+            $url = $image[0];
+
+        } else {
+
+            
+            $url = '';
+
+        }
+    }
+
+    return $url;
+}

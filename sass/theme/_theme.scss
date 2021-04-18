@@ -1,5 +1,14 @@
 body {
     font-family: $body-font;
+    p{
+        color: $gray-600;
+        font-family: $Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        width: 90%;
+    }
 }
 
 h1 {
@@ -27,6 +36,8 @@ p{
     font-style: normal;
     font-size: 16px;
     text-align: left;
+    color: $ievents-dark;
+    line-height: 135%;
     @include media-breakpoint-down(md) {
 		font-size: 14px;
     }
@@ -34,7 +45,7 @@ p{
 		font-size: 14px;
     }
     &.section-text {
-        width: 55%;
+        width: 70%;
         text-align: left;
         text-transform:none;
         padding: 0 0 $spacing-lg 0;
@@ -80,9 +91,32 @@ h3 {
 .btn:hover{
     background-color: $ievents-pinker!important;
 }
+.long-btn{
+    width: 300px!important;
+}
 
-
-    
+.wrapper-service{
+    background-color: $gray-200;
+    width: 100%;
+    padding:0px;
+    margin:0px;
+    .contnt{
+        padding: 15em 5em 5em 20em;
+    }
+    .empty{
+        background-size:cover; 
+        width: 100%; 
+        height: 50em; 
+    }
+}   
+.centered{
+    text-align: center!important;
+    margin: 20px auto;
+    width: 70%;
+}
+h1.section-title.centered{
+    text-align: center!important;
+}
 
 .community-widget.widget_media_gallery{
     width: 100%!important;
@@ -107,8 +141,51 @@ h3 {
     }
 
 }
-    
-
+.custom-categories{
+    h1{
+        font-size: 22px;
+        color: $ievents-dark;
+        margin: 0px;
+        padding: 0px;
+    }
+    p{
+        font-size: 14px;
+        line-height: normal;
+        padding:0px 0px 20px;
+    }
+}
+.row.container{
+    padding: 0px;
+}
+.no-pd{
+    padding: 0px;
+}
+.empty{
+    background-size:cover; 
+    width: 100%; 
+    height: 50em; 
+}
+.sm-empty{
+    background-size:cover; 
+    width: 100%; 
+    height: auto; 
+} 
+.columned{
+    display: flex;
+    flex-flow: column!important;
+    justify-content: left;
+}
+.content{
+    padding: 5em 0px;
+}
+.service-list{
+    list-style: none;
+    border-left:4px solid $primary;
+    margin-top:30px ;
+    p{
+        margin: 5px;
+    }
+}
 .actualites-bg{
     background-color: $gray-200!important;
     height: 500px;
@@ -423,6 +500,14 @@ img.wp-post-image {
     width: 50%;
     height: auto;
 }
+.woocommerce-loop-category__title{
+        font-size: 22px;
+        color: $ievents-dark;
+        text-align: center;
+        mark.count{
+            display: none;
+        }
 
+}
 
 

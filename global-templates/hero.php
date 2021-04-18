@@ -8,15 +8,11 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( is_active_sidebar( 'hero' ) || is_active_sidebar( 'statichero' ) || is_active_sidebar( 'herocanvas' ) ) :
-	?>
-
+?>
+</div>
+<div class="page-header" style="background: url('<?php  
+				echo get_the_post_thumbnail_url();
+				?>'); background-size: cover; background-repeat: no-repeat; background-position-y: center; min-height:500px">
+                </div><br/><br/><br/><br/>
 <div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
-	<div class="wrapper" id="wrapper-hero">
-	<br/>
-    
-
-	</div>
-
-	<?php
-endif;
+	

@@ -16,7 +16,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 <div class="wrapper prefooter" id="wrapper-prefooter">
-    <?php dynamic_sidebar( 'prefooter' ); ?>
+<div class="row wrapper-service">
+                <div class="col-md-6 col-12 contnt"style="order: 1;">
+                    <h1 class="section-title">Besoin D’information Ou De Conseils ?</h1>
+                    <p>N’hésitez pas à contacter notre équipe commerciale.</p>
+        
+                    <a class="btn btn-primary long-btn">Contactez-nous</a>
+                </div>
+                <div class="col-md-6 col-12 empty" style="background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/image-11.jpg); order:2;">
+        
+                </div>
+            </div>
+
+
+<?php //dynamic_sidebar( 'prefooter' ); ?>
 </div>
 
 <?php
