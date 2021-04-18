@@ -44,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="page-content">
 
-	<p><?php esc_html_e( 'It looks like this page is not set up yet. Maybe try one of the links below or a search?', 'ievents' ); ?></p>
+	<p><?php esc_html_e( 'It looks like this page is not set up yet. you can search and view our products or blogs below.', 'ievents' ); ?></p>
 
 	<?php get_search_form(); ?>
 
