@@ -822,3 +822,4 @@ function lay_featured_image() {
 
     return $url;
 }
+?>

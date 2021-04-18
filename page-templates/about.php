@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * Template Name: About Us
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -31,22 +31,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+            <?php
+				while ( have_posts() ) {
+					the_post();
+					get_template_part( 'loop-templates/content', 'page' );
 
-			<main class="site-main" id="main">
-				<?php
-				if (have_posts()){
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'loop-templates/content', 'page' );
-	
-					}
-
-				}
-				else{
-					get_template_part('global-templates/error');
 				}
 			?>
-			
 			</main><!-- #main -->
 
 			<!-- Do the right sidebar check -->
