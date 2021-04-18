@@ -510,4 +510,11 @@ img.wp-post-image {
 
 }
 
-
+#searchsubmit{
+    margin-top: 0px;
+    height: 38px;
+    border-radius: 0px 38px 38px 0px;
+}
+input#s.form.form-control{
+    border-radius: 38px 0px 0px 38px;
+}
