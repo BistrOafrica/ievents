@@ -815,7 +815,7 @@ function lay_featured_image() {
         } else {
 
             
-            $url = '';
+            $url = 'http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/ievents-carousell-scaled.jpg';
 
         }
     }

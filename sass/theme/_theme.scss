@@ -416,10 +416,26 @@ h1.section-title.centered{
             margin: 20px 0;
         }
     }
-    .service-card{
+    .service-card1{
         width: 100%;
         height: 400px;
         background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/image-5.jpg);
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background-position: top;
+    }
+    .service-card2{
+        width: 100%;
+        height: 400px;
+        background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/image-5-1.jpg);
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background-position: top;
+    }
+    .service-card3{
+        width: 100%;
+        height: 400px;
+        background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/Rectangle-11.jpg);
         background-repeat: no-repeat;
         background-clip: border-box;
         background-position: top;

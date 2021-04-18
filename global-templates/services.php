@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
 	<div class="row service-section">
       <div class="col-md-4">
-            <div class="service-card">
+            <div class="service-card1">
             <div class="service-link">
                   <i class="fa fa-chevron-right"></i>
             </div> </div>
@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div>
         
         <div class="col-md-4">
-            <div class="service-card">
+            <div class="service-card2">
             <div class="service-link">
                   <i class="fa fa-chevron-right"></i>
             </div> </div>
@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div>
 
         <div class="col-md-4">
-            <div class="service-card">
+            <div class="service-card3">
             <div class="service-link">
                   <i class="fa fa-chevron-right"></i>
             </div> </div>
