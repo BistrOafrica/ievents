@@ -281,13 +281,21 @@ h1.section-title.centered{
     
     
 }
-.gallery-icon.landscape{
+.blog-icon.landscape{
     img{
         width: 100%!important;
+        height: auto;
+        max-height: 200px;
         object-fit: cover;
-        object-position: top;
+        object-position: center!important;
         border-radius: 15px 15px 0px 0px!important;
+        @include media-breakpoint-down(xs) {
+            border-radius: none;
+            max-height: 350px;
+        }
     }
+
+
 }
 .section-blogs{
     margin: 20px 0px;
@@ -327,9 +335,7 @@ h1.section-title.centered{
     font-size: 16px;
     text-align: center!important;
     width: 100%;
-    @include media-breakpoint-down(xs) {
-        display: none;
-    }
+    
 }
 .section {
     padding: 100px 0;
@@ -374,7 +380,7 @@ h1.section-title.centered{
         z-index: 1;
     }
 }
-#page.wrapper{
+#page-wrapper.wrapper{
     padding: 0px;
 }
 .product-section {
@@ -597,7 +603,7 @@ a.service-btn{
     }
 }
 img.wp-post-image {
-    width: 50%;
+    width: 100%;
     height: auto;
 }
 .woocommerce-loop-category__title{

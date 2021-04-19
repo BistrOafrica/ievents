@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class=" section container">
 		<div class="row">
 			<div class="col-8"><h1 class="section-title">Nos Actualités</h1></div>
-			<div class="col-4"><a  href="#"><p class="secondary-link">Voir toutes nos actualités ></p></a></div>
+			<div class="col-4"><a  href="doctaroo.fr/sites/ievents/actualites/"><p class="secondary-link">Voir toutes nos actualités ></p></a></div>
 		</div>
 		<div class="row">
 			<?php 
@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-4">
 					<div class="single-blog">
 					<a href="<?php the_permalink(); ?>">
-						<div class="gallery-icon landscape" style="img{width:100%;}">
+						<div class="blog-icon landscape" style="img{width:100%;}">
 							<?php the_post_thumbnail(); ?>
 						</div>
 						<div class="blog-desc">

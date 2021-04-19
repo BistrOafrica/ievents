@@ -26,32 +26,49 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<p><?php esc_html_e( 'It looks like this page is not set up yet. you can search and view our products or blogs below.', 'ievents' ); ?></p>
 
 	<?php get_search_form(); ?>
+	<br/>
+	<h1 class="section-title"> Nos Actualités</h1>
+	<br/>
 
-	<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+	<div class="row">
 
-	<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-
-		<div class="widget widget_categories">
-
-			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'ievents' ); ?></h2>
-
-			<ul>
-				<?php
-				wp_list_categories(
-					array(
-						'orderby'  => 'count',
-						'order'    => 'DESC',
-						'show_count' => 1,
-						'title_li' => '',
-						'number'   => 10,
-					)
-				);
+			<?php 
+				// the query
+				$the_query = new WP_Query( array(
+					//'category_name' => 'news',
+					'posts_per_page' => 3,
+				)); 
 				?>
-			</ul>
 
-		</div><!-- .widget -->
+				<?php if ( $the_query->have_posts() ) : ?>
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+				<div class="col-md-4">
+					<div class="single-blog">
+					<a href="<?php the_permalink(); ?>">
+						<div class="blog-icon landscape" style="img{width:100%;}">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<div class="blog-desc">
+							<p class="title"><?php the_title(); ?></p>
+							<p class="author">By: <?php the_author(); ?></p>
+						</a>
+						</div>
+					</div>
+				</div>
+					
+					
+					
 
-	<?php endif; ?>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+
+				<?php else : ?>
+				<p><?php __('No News'); ?></p>
+				<?php endif; ?>
+	</div>
+	
+
+	
 
 	<?php
 
