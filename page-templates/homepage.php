@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						get_template_part( 'global-templates/hero-header' );
 						get_template_part( 'global-templates/carousel');
 						get_template_part( 'global-templates/services' ); 
-						get_template_part( 'sidebar-templates/sidebar', 'actualites' );
+						get_template_part( 'global-templates/latest-news' );
 						get_template_part( 'global-templates/partners' );
 						get_template_part( 'sidebar-templates/sidebar', 'community' );
 

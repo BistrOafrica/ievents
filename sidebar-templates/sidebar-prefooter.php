@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php if ( is_active_sidebar( 'prefooter' ) ) : ?>
     	<!-- ******************* The Pre-Footer Full-width Widget Area ******************* -->
 
-
+</div>
 <div class="wrapper prefooter" id="wrapper-prefooter">
 <div class="row wrapper-service">
                 <div class="col-md-6 col-12 contnt"style="order: 1;">
@@ -31,6 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php //dynamic_sidebar( 'prefooter' ); ?>
 </div>
+<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
 <?php
 endif;

@@ -5,16 +5,50 @@ body {
         font-family: $Lato;
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 20px; 
         line-height: 30px;
         width: 90%;
     }
 }
+.author{
+    font-family:$body-font;
+    font-size: 16px;
+    font-weight: 300px;
+    color: $gray-600;
+    text-transform: capitalize;
+}
+.date{
+    font-family:$body-font;
+    font-size: 16px;
+    font-weight: 300px;
+    color: $primary;
+    text-transform: capitalize;
+}
+.excerpt{
+    p{
+        font-family:$body-font;
+        font-size: 16px;
+        font-weight: 300px;
+        color: $primary;
+        text-align: justify;
+        hyphens: none;
+        text-transform:none;
+    }
+}
 
+.title{
+    font-family: $bold-font;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 28px;
+    color:$ievents-dark;
+
+}
 h1 {
     font-family: $bold-font;
-    font-size: 34px;
-    font-weight: 700;
+    font-size: 34px; 
+    font-weight: 700; 
     font-style:normal;
     color: $primary;
     padding: 0 0 30px 0;
@@ -247,8 +281,56 @@ h1.section-title.centered{
     
     
 }
+.gallery-icon.landscape{
+    img{
+        width: 100%!important;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 15px 15px 0px 0px!important;
+    }
+}
+.section-blogs{
+    margin: 20px 0px;
+    height: fit-content;
+    
+}
+.single-blog{
+    margin-bottom: 30px;
+    border:1px solid $gray-300;
+    border-radius: 15px;
+    p{
+        text-align: center;
+        margin: 0px;
+    }
+}
 
-
+.secondary-link{
+    font-family: $body-font;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 135%;
+    color: $ievents-pink;
+    text-decoration: none;
+}
+.secondary-link:hover{
+    color: $ievents-pinker;
+    
+}
+.blog-desc{
+    background-color: $white;
+    padding:30px 20px;
+    font-family: $bold-font; 
+    border-radius:0px 0px 15px 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center!important;
+    width: 100%;
+    @include media-breakpoint-down(xs) {
+        display: none;
+    }
+}
 .section {
     padding: 100px 0;
     @include media-breakpoint-down(xs) {
@@ -292,7 +374,9 @@ h1.section-title.centered{
         z-index: 1;
     }
 }
-
+#page.wrapper{
+    padding: 0px;
+}
 .product-section {
     .product {
         height: 100%;
@@ -517,12 +601,16 @@ img.wp-post-image {
     height: auto;
 }
 .woocommerce-loop-category__title{
-        font-size: 22px;
-        color: $ievents-dark;
-        text-align: center;
-        mark.count{
-            display: none;
-        }
+    font-family: $bold-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    color: $ievents-dark;
+    text-align: center;
+    line-height: 31px;
+    mark.count{
+        display: none;
+    }
 
 }
 

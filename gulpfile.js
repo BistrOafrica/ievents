@@ -80,6 +80,7 @@ gulp.task( 'imagemin', () =>
 gulp.task( 'minifycss', function() {
 	return gulp
 		.src( [
+			paths.css + '/admin-style.css',
 			paths.css + '/custom-editor-style.css',
 			paths.css + '/theme.css',
 		] )
@@ -168,14 +169,6 @@ gulp.task(
 	} )
 );
 
-/**
- * Starts watcher with browser-sync.
- * Browser-sync reloads page automatically on your browser.
- * 
- * Run: gulp watch-bs
- */
-gulp.task( 'watch-bs', gulp.parallel( 'browser-sync', 'watch' ) );
-
 // Run:
 // gulp scripts.
 // Uglifies and concat all JS files into one
@@ -206,6 +199,16 @@ gulp.task( 'scripts', function() {
 		.pipe( concat( 'theme.js' ) )
 		.pipe( gulp.dest( paths.js ) );
 } );
+
+/**
+ * Starts watcher with browser-sync.
+ * Browser-sync reloads page automatically on your browser.
+ * 
+ * Run: gulp watch-bs
+ */
+gulp.task( 'watch-bs', gulp.parallel( 'browser-sync', 'scripts', 'watch' ) );
+
+
 
 // Deleting any file inside the /src folder
 gulp.task( 'clean-source', function() {
