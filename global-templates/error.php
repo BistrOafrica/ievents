@@ -50,7 +50,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 						<div class="blog-desc">
 							<p class="title"><?php the_title(); ?></p>
-							<p class="author">By: <?php the_author(); ?></p>
+                            <div class="excerpt"><?php the_excerpt(); ?></div>
+                            <p class="author">By: <?php the_author(); ?></p>
+                            <p class="date"><?php the_date(); ?></p>
 						</a>
 						</div>
 					</div>

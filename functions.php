@@ -72,14 +72,14 @@ add_filter('wp_nav_menu','add_menuclass');
     }
 
 
-add_action('admin_menu', 'customize_homepage');
+add_action('admin_menu', 'customize_components');
 
-function customize_homepage() { 
-    add_menu_page( '','Homepage', '','landing', '','dashicons-welcome-widgets-menus', 90);  
+function customize_components() { 
+    add_menu_page( '','Components', '','landing', '','dashicons-welcome-widgets-menus', 90);  
     add_submenu_page('landing','Slider', 'Slider','manage_options','setup_slider','setup_slider');
-    add_submenu_page('landing','Services', 'Services','manage_options','services','services');
     add_submenu_page('landing','Partners', 'Partners','manage_options','Partners','Partners');
-    add_submenu_page('landing','Who we are', 'Who we are','manage_options','who_we_are','who_we_are');
+    add_submenu_page('landing','Services', 'Services','manage_options','services','services');
+    add_submenu_page('landing','Prefooter', 'Prefooter','manage_options','pre_footer','pre_footer');
 }
 
 function setup_slider(){
@@ -269,150 +269,6 @@ function setup_slider(){
 
 
 
-function services(){
-    ?>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-<style type="text/css">
-    fieldset {
-     
-      padding:10px !important;
-      border:1px solid #E8E7E6  !important;
-    }
-
-    legend { 
-     
-      font-size:16px !important;
-      text-transform:uppercase;
-      text-align: center;
-    }
-
-   .postbox{
-
-    margin:50px;
-    padding:50px;
-    padding-bottom:20px;
-
-   } 
-
-</style>
-
-
-<div class="postbox">
-<div class="form-body row">
-
- <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post" enctype="multipart/form-data">
-        
-<div class="col-md-3">
-    <fieldset>
-        <legend>Recherche de produi</legend>
-          
-         <div class="form-group form-md-line-input">    
-       
-        <textarea name="intro_1" class="form-control" rows="5" autocomplete="off">
-        <?php echo get_option('intro_1');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-
- 
-
-</div>
-
-<div class="col-md-3">
-    <fieldset>
-        <legend>Legistique</legend>
-          
-         <div class="form-group form-md-line-input">
-       
-        <textarea name="intro_2" class="form-control" rows="5" autocomplete="off">
-        <?php echo get_option('intro_2');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-
-</div>
-
-
-
-<div class="col-md-3">
-    <fieldset>
-        <legend>Distribution</legend>
-          
-         <div class="form-group form-md-line-input">
-       
-        <textarea name="intro_3" class="form-control" rows="5" autocomplete="off">
-        <?php echo get_option('intro_3');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-</div>
-
-<div class="col-md-3">
-    <fieldset>
-        <legend>Avantages</legend>
-          
-         <div class="form-group form-md-line-input">
-       
-        <textarea name="intro_4" class="form-control" rows="5" autocomplete="off">
-        <?php echo get_option('intro_4');?>
-         </textarea> 
-            <div class="form-control-focus"> </div>
-     
-         </div>
-
-    </fieldset>
-</div>
-
-
-
-
-        </div>
-        <hr>
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary" name="intro_btn">Submit</button>
-        </div>
-
-</form>
-
-</div>
-
-<?php
-
-    if(isset($_REQUEST["intro_btn"]))
-    {
-
-        $intro_1 = $_REQUEST["intro_1"];
-        $intro_2 = $_REQUEST["intro_2"];
-        $intro_3 = $_REQUEST["intro_3"];
-        $intro_4 = $_REQUEST["intro_4"];
-        
-
-        add_option('intro_1',$intro_1,'','yes');
-        update_option('intro_1',$intro_1);
-
-        add_option('intro_2',$intro_2,'','yes');
-        update_option('intro_2',$intro_2);
-
-        add_option('intro_3',$intro_3,'','yes');
-        update_option('intro_3',$intro_3);
-
-        add_option('intro_4',$intro_4,'','yes');
-        update_option('intro_4',$intro_4);
-
-    }
-
-}
 
 function Partners(){
     ?>
@@ -615,7 +471,7 @@ function Partners(){
 
 
 }
-function who_we_are(){
+function Services(){
     ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -641,6 +497,10 @@ function who_we_are(){
     padding-bottom:20px;
 
    } 
+   img{
+       width:300px!important;
+       height:auto;
+   }
 
 </style>
 
@@ -651,17 +511,77 @@ function who_we_are(){
 
  <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post" enctype="multipart/form-data">
         
-<div class="col-md-4 ">
+ <div class="col-md-4 ">
     <fieldset>
-        <legend>Image</legend>
+        <legend>Image1</legend>
         <div class="form-group form-md-line-input">
-            <label class="control-label">Image</label>
+            <label class="control-label">Image1</label>
         <?php
-        if(get_option('who_img_1')!="")
-        echo "<img src='". get_option('who_img_1')."' style='margin:auto; width:100%'/>";
+        if(get_option('service_img_1')!="")
+        echo "<img src='". get_option('service_img_1')."' style='margin:auto; width:100%'/>";
         ?>
             
-        <input type="file" name="who_img_1" value="" class="form-control" autocomplete="off">
+        <input type="file" name="service_img_1" value="" class="form-control" autocomplete="off">
+        <div class="form-control-focus"> </div>
+          
+        </div>      
+        
+
+    </fieldset>
+
+ 
+
+</div>
+
+<div class="row">
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Header1</legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Header1</label>
+
+        <input type="text" name="service_header_1" value="<?php echo get_option('service_header_1');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+
+
+
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Details1</legend>
+            
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Details1</label>
+       
+        <textarea name="service_details_1" class="form-control" autocomplete="off">
+        <?php echo get_option('service_details_1');?>
+         </textarea> 
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Image2</legend>
+        <div class="form-group form-md-line-input">
+            <label class="control-label">Image2</label>
+        <?php
+        if(get_option('service_img_2')!="")
+        echo "<img src='". get_option('service_img_2')."' style='margin:auto; width:100%'/>";
+        ?>
+            
+        <input type="file" name="service_img_2" value="" class="form-control" autocomplete="off">
         <div class="form-control-focus"> </div>
           
         </div>      
@@ -675,12 +595,12 @@ function who_we_are(){
 
 <div class="col-md-4 ">
     <fieldset>
-        <legend>Header</legend>
+        <legend>Header2</legend>
            
          <div class="form-group form-md-line-input">
-        <label class=" control-label">Header</label>
+        <label class=" control-label">Header2</label>
 
-        <input type="text" name="who_header" value="<?php echo get_option('who_header');?>" class="form-control" autocomplete="off">
+        <input type="text" name="service_header_2" value="<?php echo get_option('service_header_2');?>" class="form-control" autocomplete="off">
        
             <div class="form-control-focus"> </div>
      
@@ -694,13 +614,13 @@ function who_we_are(){
 
 <div class="col-md-4 ">
     <fieldset>
-        <legend>Details</legend>
+        <legend>Details2</legend>
             
          <div class="form-group form-md-line-input">
-        <label class=" control-label">Details</label>
+        <label class=" control-label">Details2</label>
        
-        <textarea name="who_details" class="form-control" autocomplete="off">
-        <?php echo get_option('who_details');?>
+        <textarea name="service_details_2" class="form-control" autocomplete="off">
+        <?php echo get_option('service_details_2');?>
          </textarea> 
             <div class="form-control-focus"> </div>
      
@@ -708,13 +628,111 @@ function who_we_are(){
 
     </fieldset>
 </div>
+</div>
+<div class="row">
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Image3</legend>
+        <div class="form-group form-md-line-input">
+            <label class="control-label">Image3</label>
+        <?php
+        if(get_option('service_img_3')!="")
+        echo "<img src='". get_option('service_img_3')."' style='margin:auto; width:100%'/>";
+        ?>
+            
+        <input type="file" name="service_img_3" value="" class="form-control" autocomplete="off">
+        <div class="form-control-focus"> </div>
+          
+        </div>      
+        
+
+    </fieldset>
+
+ 
+
+</div>
+
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Header3</legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Header3</label>
+
+        <input type="text" name="service_header_3" value="<?php echo get_option('service_header_3');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+
+
+
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Details3</legend>
+            
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Details3</label>
+       
+        <textarea name="service_details_3" class="form-control" autocomplete="off">
+        <?php echo get_option('service_details_3');?>
+         </textarea> 
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+</div>
+</div>
 
 
 
         </div>
+
+<div class="row">
+<div class="col-md-6 ">
+    <fieldset>
+        <legend>Service Section Title</legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Title</label>
+
+        <input type="text" name="service_Section_Title" value="<?php echo get_option('service_Section_Title');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+
+
+
+<div class="col-md-6 ">
+    <fieldset>
+        <legend>Section Excerpt</legend>
+            
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Excerpt</label>
+       
+        <textarea name="section_Excerpt" class="form-control" autocomplete="off">
+        <?php echo get_option('section_Excerpt');?>
+         </textarea> 
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+</div>
+</div>
         <hr>
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary" name="who_btn">Submit</button>
+            <button type="submit" class="btn btn-primary" name="service_btn">Submit</button>
         </div>
 
 </form>
@@ -725,18 +743,43 @@ function who_we_are(){
 <?php
 
 
-    if(isset($_REQUEST["who_btn"]))
+    if(isset($_REQUEST["service_btn"]))
     {
     
-        $who_header = $_REQUEST["who_header"];
-        $who_details = $_REQUEST["who_details"];
+        $service_header_1 = $_REQUEST["service_header_1"];
+        $service_details_1 = $_REQUEST["service_details_1"];
+
+        $service_header_2 = $_REQUEST["service_header_2"];
+        $service_details_2 = $_REQUEST["service_details_2"];
+
+        $service_header_3 = $_REQUEST["service_header_3"];
+        $service_details_3 = $_REQUEST["service_details_3"];
+
+        $service_Section_Title = $_REQUEST["service_Section_Title"];
+        $section_Excerpt = $_REQUEST["section_Excerpt"];
+
         
 
-        add_option('who_header',$who_header,'','yes');
-        update_option('who_header',$who_header);
+        add_option('service_header-1',$service_header_1,'','yes');
+        update_option('service_header_1',$service_header_1);
 
-        add_option('who_details',$who_details,'','yes');
-        update_option('who_details',$who_details);
+        add_option('service_details_1',$service_details_1,'','yes');
+        update_option('service_details_1',$service_details_1);
+
+        add_option('service_header_2',$service_header_2,'','yes');
+        update_option('service_header_2',$service_header_2);
+
+        add_option('service_details_2',$service_details_2,'','yes');
+        update_option('service_details_2',$service_details_2);
+
+        add_option('service_header_3',$service_header_3,'','yes');
+        update_option('service_header_3',$service_header_3);
+
+        add_option('service_details_3',$service_details_3,'','yes');
+        update_option('service_details_3',$service_details_3);
+
+        add_option('service_Section_Title',$service_Section_Title,'','yes');
+        update_option('section_Excerpt',$section_Excerpt);
                
         require_once(ABSPATH . "wp-admin" . '/includes/image.php');
         require_once(ABSPATH . "wp-admin" . '/includes/file.php');
@@ -752,12 +795,160 @@ function who_we_are(){
                         $image_url_array=wp_get_attachment_image_src($attach_id,'full');
                         $image_url = $image_url_array[0];
                          
-                        add_option('who_img_'.$i,$image_url,'','yes');
-                        update_option('who_img_'.$i,$image_url);
+                        add_option('service_img_'.$i,$image_url,'','yes');
+                        update_option('service_img_'.$i,$image_url);
                     }
                  
                    $i++;
                 }            
+
+            }
+
+    }
+
+
+}
+function pre_footer(){
+    ?>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style type="text/css">
+    fieldset {
+     
+      padding:10px !important;
+      border:1px solid #E8E7E6  !important;
+    }
+
+    legend { 
+     
+      font-size:16px !important;
+      text-transform:uppercase;
+      text-align: center;
+    }
+
+   .postbox{
+
+    margin:50px;
+    padding:50px;
+    padding-bottom:20px;
+
+   } 
+   img{
+       width:300px!important;
+       height:auto;
+   }
+
+</style>
+
+
+            
+<div class="postbox">
+<div class="form-body row">
+
+ <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post" enctype="multipart/form-data">
+        
+ <div class="col-md-4 ">
+    <fieldset>
+        <legend>Pre-footer Image</legend>
+        <div class="form-group form-md-line-input">
+            <label class="control-label">Image</label>
+        <?php
+        if(get_option('pre_footer_img')!="")
+        echo "<img src='". get_option('pre_footer_img')."' style='margin:auto; width:100%'/>";
+        ?>
+            
+        <input type="file" name="pre_footer_img" value="" class="form-control" autocomplete="off">
+        <div class="form-control-focus"> </div>
+          
+        </div>      
+        
+
+    </fieldset>
+
+ 
+
+</div>
+
+<div class="row">
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Header</legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Header</label>
+
+        <input type="text" name="pre_footer_header" value="<?php echo get_option('pre_footer_header');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+
+
+
+<div class="col-md-4 ">
+    <fieldset>
+        <legend>Details1</legend>
+            
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Details1</label>
+       
+        <textarea name="pre_footer_detail" class="form-control" autocomplete="off">
+        <?php echo get_option('pre_footer_detail');?>
+         </textarea> 
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+</div>
+</div>
+
+        <hr>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary" name="service_btn">Submit</button>
+        </div>
+
+</form>
+
+</div>
+
+
+<?php
+
+
+    if(isset($_REQUEST["service_btn"]))
+    {
+    
+        $pre_footer_header= $_REQUEST["pre_footer_header"];
+        $pre_footer_detail = $_REQUEST["pre_footer_detail"];
+
+        
+
+        add_option('pre_footer_header',$pre_footer_header,'','yes');
+        update_option('pre_footer_detail',$pre_footer_detail);
+               
+        require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+        require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+        require_once(ABSPATH . "wp-admin" . '/includes/media.php'); 
+       
+           if ($_FILES) {
+
+               $i=1;
+               if ($_FILES[$file]['error']==0) {  
+                $attach_id = media_handle_upload( $file, "" );
+                $image_url_array=wp_get_attachment_image_src($attach_id,'full');
+                $image_url = $image_url_array[0];
+                 
+                add_option('pre-footer_img'.$i,$image_url,'','yes');
+                update_option('service_img'.$i,$image_url);
+                }
+
+                        
 
             }
 

@@ -17,13 +17,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class=" section container">
 		<div class="row">
 			<div class="col-8"><h1 class="section-title">Nos Actualités</h1></div>
-			<div class="col-4"><a  href="doctaroo.fr/sites/ievents/actualites/"><p class="secondary-link">Voir toutes nos actualités ></p></a></div>
+			<div class="col-4 section-link"><a  href="doctaroo.fr/sites/ievents/actualites/"><p class="secondary-link">Voir toutes nos actualités ></p></a></div>
 		</div>
 		<div class="row">
 			<?php 
 				// the query
 				$the_query = new WP_Query( array(
-					//'category_name' => 'news',
+					'cat' => 'latest news',
 					'posts_per_page' => 3,
 				)); 
 				?>

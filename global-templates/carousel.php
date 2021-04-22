@@ -15,15 +15,15 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="carousel-inner ">
         <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
         <div class="carousel-item active">
-            <img src="http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/ievents-carousel-3.jpg">
+            <img src="<?php echo get_option('slide_img_1');?>">
         </div>
         <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item active">
-            <img src="http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/ievents-carousell.jpg">
+            <img src="<?php echo get_option('slide_img_2');?>">
         </div>
         <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item active">
-            <img src="http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/ievents-carousel-1.jpg">
+            <img src="<?php echo get_option('slide_img_3');?>">
         </div>
         <label for="carousel-3" class="carousel-control prev control-1">‹</label>
         <label for="carousel-2" class="carousel-control next control-1">›</label>

@@ -35,58 +35,55 @@ $container = get_theme_mod( 'understrap_container_type' );
 		            </div>
                     <?php get_template_part( 'global-templates/hero' ); ?>
 </div>
-    <div>
-        <h1 class="section-title centered">Nos interventions</h1>
-        <p class="centered">En spectacle, au service de vos concerts, pièces de théâtre, danse et festivals…
-            <br/>En événementiel pour les Conférences de presse, les Meetings, les Expositions, les lancements de Produits, les salons professionnels…
-            </p>
+<div>
+        <h1 class="section-title centered"><?php echo get_option('service_Section_Title');?></h1>
+        <p class="centered"><?php echo get_option('section_Excerpt');?></p>
     </div>
 
-</div>
-
         <div style="margin: 130px 0px;">
-            <div class="row wrapper-service">
-                <div class="col-md-6 col-12 contnt"style="order: 2;">
-                    <h1 class="section-title">Spectacles</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent.
+        <div class="row wrapper-service">
+                <div class="col-md-6 col-12 contnt"style="order: 1;">
+                <div class="cont">
+                    <h1 class="section-title"><?php echo get_option('service_header_1');?></h1>
+                    <p><?php echo get_option('service_details_1');?></p>
         
-                        elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.</p>
-        
-                    <a class="btn btn-primary long-btn">Contactez-nous</a>
+                    <a class="btn btn-primary long-btn">Contactez-nous</a></div>
                 </div>
-                <div class="col-md-6 col-12 empty" style="background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/image-5-5.jpg); order:2;">
-        
-                </div>
-            </div>
-
-            <div class="row wrapper-service">
-                <div class="col-md-6 col-12 contnt" style="order: 2;">
-                    <h1 class="section-title">Evénementiel</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent.
-        
-                        elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.</p>
-        
-                    <a class="btn btn-primary long-btn">Contactez-nous</a>
-                </div>
-                <div class="col-md-6 col-12 empty" style="background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/image-6.jpg); order: 1;">
+                <div class="col-md-6 col-12 empty" style="background-image: url(<?php echo get_option('service_img_1');?>); order:2;">
         
                 </div>
             </div>
 
             <div class="row wrapper-service">
                 <div class="col-md-6 col-12 contnt"style="order: 2;">
-                    <h1 class="section-title">Expositions</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent.
+                <div class="cont2">
+                    <h1 class="section-title"><?php echo get_option('service_header_2');?></h1>
+                    <p><?php echo get_option('service_details_2');?></p>
         
-                        elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.</p>
-        
-                    <a class="btn btn-primary long-btn">Contactez-nous</a>
+                    <a class="btn btn-primary long-btn">Contactez-nous</a></div>
                 </div>
-                <div class="col-md-6 col-12 empty" style="background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/Rectangle-11-3.jpg); order:2;">
+                <div class="col-md-6 col-12 empty" style="background-image: url(<?php echo get_option('service_img_2');?>); order:1;">
         
                 </div>
             </div>
+
+            <div class="row wrapper-service">
+                <div class="col-md-6 col-12 contnt"style="order: 1;">
+                <div class="cont">
+                    <h1 class="section-title"><?php echo get_option('service_header_3');?></h1>
+                    <p><?php echo get_option('service_details_3');?></p>
+        
+                    <a class="btn btn-primary long-btn">Contactez-nous</a></div>
+                </div>
+                <div class="col-md-6 col-12 empty" style="background-image: url(<?php echo get_option('service_img_3');?>); order:2;">
+        
+                </div>
+            </div>
+
+            
         </div>
+
+
         <div class="container section">
     <div class="row container columned">
         <div><p class="sm-title">Nos Équipes</p><div class="sm-title-dash"></div></div><div><br/>
@@ -114,7 +111,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="col-md-6 col-12 sm-empty" style="background-image: url(http://localhost/wordpress/wp-content/uploads/2021/04/Rectangle-17.jpg);">     
         </div>
     </div>
-    <div class="section">
+<div class="section">
         <div class="row container"><h1>Location de matériel</h1></div>
         <div class="row container">
             <div class="col-md-6 no-pd">
@@ -163,6 +160,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 
+
+<!--*-->
+
+    
 <?php get_template_part( 'sidebar-templates/sidebar', 'prefooter' ); ?>
 <?php 
 	get_footer();

@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php 
 				// the query
 				$the_query = new WP_Query( array(
-					//'category_name' => 'news',
+					'category_name' => 'latest news',
 					'posts_per_page' => 9,
 				)); 
 				?>
