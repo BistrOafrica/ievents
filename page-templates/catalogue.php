@@ -35,15 +35,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					$product_categories = get_terms( 'product_cat', 'hide_empty=1' );
 					if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
-					foreach ( $product_categories as $category ) {    
-						echo '<div class="col-md-4" style="background-image:url"'; echo wp_get_attachment_image_src( $category_thumbnail, "full").'">' ;
+					foreach ( $product_categories as $category ) { 
+						$thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
+            			$image = wp_get_attachment_url( $thumbnail_id );   
+
+						echo '<div class="col-md-4"><div class="category-image" style="background-image:url("'; echo esc_url( $image ).'"); background-size:cover;"';
 						echo '
 						<a href="#" class="service-chevron">
 							<div class="service-link">
 								<i class="fa fa-chevron-right"></i>
 							</div>
-						</a></div><h2>'; 
-						echo esc_html( $category->name ). '</h2>';
+						</a></div>
+						<div><h2>'; 
+						echo esc_html( $category->name ). '</h2></div>';
 						}
 
             
