@@ -90,6 +90,14 @@ p{
     ;
 }
 h2 {
+    margin: 25px;
+    font-family: $bold-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+    color: $ievents-dark;
 	@include media-breakpoint-down(xs) { 
 		font-size: 24px;
 	}
@@ -540,7 +548,6 @@ h1.section-title.centered{
         position: relative;
         width: 100%;
         height: 400px;
-        background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/image-5.jpg);
         background-repeat: no-repeat;
         background-clip: border-box;
         background-position: top;
@@ -549,7 +556,6 @@ h1.section-title.centered{
         position: relative;
         width: 100%;
         height: 400px;
-        background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/image-5-1.jpg);
         background-repeat: no-repeat;
         background-clip: border-box;
         background-position: top;
@@ -558,7 +564,6 @@ h1.section-title.centered{
         position: relative;
         width: 100%;
         height: 400px;
-        background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/Rectangle-11.jpg);
         background-repeat: no-repeat;
         background-clip: border-box;
         background-position: top;
@@ -588,21 +593,34 @@ a.service-btn{
     width:300px!important;
 }
 
-.category-section {
+
+
+
+.category-section{
     display: flex;
-    justify-content: center;
-    .category {
-        background-color: $ievents-grey;
-        margin-bottom: $spacing-lg;
-        .category-inner {
-            padding: $spacing-lg;
-            min-height: 350px;
-            word-wrap: break-word;
-        }
-        .category-image {
-            margin-top: $spacing-lg;
-            max-height: 200px;
-            overflow: hidden;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.category-image{
+    position:relative;
+    max-width: 350px;
+    min-height: 419px;
+    a.category-chevron{
+        position:absolute;
+        bottom: 0px;
+        left: 0px;
+        .category-link{
+            background-color: $primary;
+            width: 80px;
+            height:80px;
+            @include media-breakpoint-down(xs) {
+            }
+            
+            .fa{
+                color: $white;
+                font-size: 35px;
+                margin: 20px 0;
+            }
         }
     }
 }

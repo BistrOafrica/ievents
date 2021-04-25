@@ -31,9 +31,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					get_option('header_emp_cp'),
 					get_option('hero_details_cp'));
 					
-					echo '<div class="row service-section" >';
+					echo '<div class="row section service-section" >';
 
-					$product_categories = get_terms( 'product_cat', 'hide_empty=1' );
+					$product_categories = get_terms( 'product_cat','orderby = ID', 'order= DESC', 'hide_empty=1' );
 					if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
 					foreach ( $product_categories as $category ) { 
 						$thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
@@ -41,8 +41,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						?>
 						<div class="col-md-4">
 							<div class="category-image" style="background-image:url('<?php echo esc_url( $image );?>');background-size:cover;width: 100%;height: 400px;">
-								<a href="#">
-									<div class="service-link">
+								<a class="category-chevron" href="<?php echo esc_url( get_term_link( $category ) ); ?>">
+									<div class="category-link">
 										<i class="fa fa-chevron-right"></i>
 									</div>
 								</a>
