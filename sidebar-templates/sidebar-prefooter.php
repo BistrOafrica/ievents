@@ -19,13 +19,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="row wrapper-service">
                 <div class="col-md-6 col-12 contnt"style="order: 1;">
                     <div class="cont">
-                    <h1 class="section-title">Besoin D’information Ou De Conseils ?</h1>
-                    <p>N’hésitez pas à contacter notre équipe commerciale.</p>
+                    <h1 class="section-title"><?php echo get_option('pre_footer_header');?></h1>
+                    <p><?php echo get_option('pre_footer_detail');?></p>
         
                     <a class="btn btn-primary long-btn">Contactez-nous</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 empty" style="background-image: url(http://doctaroo.fr/sites/ievents/wp-content/uploads/2021/04/image-11.jpg); order:2;">
+                <div class="col-md-6 col-12 empty" style="background-image: url(<?php echo get_option('pre_footer_img_1');?>); order:2;">
         
                 </div>
             </div>

@@ -15,4 +15,3 @@ defined( 'ABSPATH' ) || exit;
 				?>'); background-size: cover; background-repeat: no-repeat; background-position-y: center; min-height:500px">
                 </div><br/><br/><br/><br/>
 <div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
-	
