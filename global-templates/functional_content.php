@@ -66,12 +66,12 @@ function prestations_section($sectionTag,$sectionTitle,$sectionContent,$serviceI
             foreach ( $product_categories as $category ) {    
                 echo '<div class="col-md-4"> <a href="';
                 echo esc_url( get_term_link( $category ) ); 
-                echo'"><h1>title should be here'; 
+                echo'"><h1>'; 
                 echo esc_html( $category->name ); 
                 echo '</h1><p>';
                 echo esc_html($category->description); 
-                echo ' Content should be here</p>';
-                echo '</a></div></div>';
+                echo '</p>';
+                echo '</a></div>';
                 }
             }
             else{ ?>
