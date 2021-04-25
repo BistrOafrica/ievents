@@ -38,27 +38,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 					foreach ( $product_categories as $category ) { 
 						$thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
             			$image = wp_get_attachment_url( $thumbnail_id );   
-
-						echo '<div class="col-md-4"><div class="category-image" style="background-image:url("'; echo esc_url( $image ).'"); background-size:cover;"';
-						echo '
-						<a href="#" class="service-chevron">
-							<div class="service-link">
-								<i class="fa fa-chevron-right"></i>
+						?>
+						<div class="col-md-4">
+							<div class="category-image" style="background-image:url('<?php echo esc_url( $image );?>');background-size:cover;width: 100%;height: 400px;">
+								<a href="#">
+									<div class="service-link">
+										<i class="fa fa-chevron-right"></i>
+									</div>
+								</a>
 							</div>
-						</a></div>
-						<div><h2>'; 
-						echo esc_html( $category->name ). '</h2></div>';
-						}
-
-            
-        
+							<div>
+								<h2><?php echo esc_html( $category->name );?></h2>
+							</div>
+						</div>
+<?php					}
 					}
 					else{ ?>
 						<p><?php echo ('No product Categories Yet'); ?></p>
 					<?php 
 					} ?>
-					<?php echo '</div>'
-		?>
+					</div>
+
 
 				</main><!-- #main -->
 
