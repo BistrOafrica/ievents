@@ -97,6 +97,7 @@
     .navbar-brand {
         background-color: $white;
         padding: $spacing;
+        padding-left: 0px;
         border-radius: 0 0 $spacing-xs $spacing-xs;
         img {
             width: 100%;
@@ -116,6 +117,7 @@
             flex-flow: row wrap;
         }
         .logo-bar{
+            padding-left:0px;
             @include media-breakpoint-down(xs) {
                 padding: 0;
                 .custom-logo-link{
@@ -149,7 +151,10 @@
         }
     }
     .navbar-nav {
+        margin: auto;
         .active {
+            color: $ievents-pink;
+            border-bottom: 3px solid $ievents-pink;
             .nav-link {
                 font-weight: 600;
             }
@@ -173,6 +178,7 @@
         }
     }
    .nav-btn{
+       margin: 0px;
     @include media-breakpoint-down(xs) {
         display: none!important;
     }

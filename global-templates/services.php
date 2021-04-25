@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="row service-section">
       <div class="col-md-4">
             <div class="service-card1" style="background-image: url(<?php echo get_option('service_img_1');?>); background-size:cover;">
-            <a href="#" class="service-chevron">
+            <a href="http://doctaroo.fr/sites/ievents/services/" class="service-chevron">
             <div class="service-link">
                   <i class="fa fa-chevron-right"></i>
             </div> </div></a>
@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         
         <div class="col-md-4">
             <div class="service-card2" style="background-image: url(<?php echo get_option('service_img_2');?>); background-size:cover;">
-            <a href="#" class="service-chevron">
+            <a href="http://doctaroo.fr/sites/ievents/services/" class="service-chevron">
             <div class="service-link">
                   <i class="fa fa-chevron-right"></i>
             </div> </div></a>
@@ -40,7 +40,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div class="col-md-4">
             <div class="service-card3" style="background-image: url(<?php echo get_option('service_img_3');?>); background-size:cover;">
-            <a href="#" class="service-chevron">
+            <a href="http://doctaroo.fr/sites/ievents/services/" class="service-chevron">
             <div class="service-link">
                   <i class="fa fa-chevron-right"></i>
             </div> </div></a>

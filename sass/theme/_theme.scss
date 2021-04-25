@@ -1,3 +1,6 @@
+html,body{
+    overflow-x: hidden;
+}
 body {
     font-family: $body-font;
     p{
@@ -8,6 +11,11 @@ body {
         font-size: 20px; 
         line-height: 30px;
         width: 90%;
+        @include media-breakpoint-down(md) {
+            padding: 10px;
+            text-align: center;
+        }
+        
     }
 }
 .author{
@@ -33,6 +41,7 @@ body {
         text-align: justify;
         hyphens: none;
         text-transform:none;
+        
     }
 }
 
@@ -57,11 +66,16 @@ h1 {
     }
     @include media-breakpoint-down(sm) {
 		font-size: 28px;
+        text-align: center;
+        margin: 5px auto;
     }
     &.section-title {
         text-align: left;
         text-transform: capitalize;
         padding: 0 0 $spacing-lg 0;
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
     }
 }
 p{
@@ -75,14 +89,19 @@ p{
     @include media-breakpoint-down(md) {
 		font-size: 14px;
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
 		font-size: 14px;
+        text-align: center;
+        margin: 0px auto;
     }
     &.section-text {
         width: 70%;
         text-align: left;
         text-transform:none;
         padding: 0 0 $spacing-lg 0;
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
     } 
 }
 .logo-title{
@@ -137,6 +156,12 @@ h3 {
 .long-btn{
     width: 300px!important;
 }
+.container{
+    @include media-breakpoint-down(xs) {
+        width: 95vw;
+        margin: 30px auto;
+    }
+}
 
 .wrapper-service{
     background-color: $gray-200;
@@ -147,14 +172,21 @@ h3 {
         display: flex;
         flex-flow: row-reverse;
         justify-content:flex-end;
+        @include media-breakpoint-down(xs) {
+            order: 2!important;
+            justify-content: center;
+        }
         .cont{
             width: 60%;
             height: fit-content;
             margin: auto;
             margin-right: 150px;
             @include media-breakpoint-down(xs) {
-                margin:30px 0px;
+                width: 90%;
+                margin:30px auto;
                 height:max-content;
+                text-align: center;
+                
             }
         }
         .cont2{
@@ -163,8 +195,10 @@ h3 {
             margin: auto;
             margin-left: 150px;
             @include media-breakpoint-down(xs) {
-                margin:30px 0px;
+                width: 90%;
+                margin:30px auto;
                 height:max-content;
+                text-align: center;
             }
         }
     }
@@ -172,6 +206,10 @@ h3 {
         background-size:cover; 
         width: 100%; 
         height: 50em; 
+        @include media-breakpoint-down(xs) {
+            height: 20em!important;
+            order: 1!important;
+        }
     }
 }   
 .centered{
@@ -188,14 +226,21 @@ h1.section-title.centered{
     margin: 0 0 120px 0;
     padding: 0!important;
     min-width: none!important;
+    @include media-breakpoint-down(xs) {
+        margin: 0 0 50px 0;
+    }
     .gallery{
         display: flex;
         flex-flow: row!important;
         justify-content: center!important;
+        
     }
     .gallery-item{
         margin:5px;
         padding: 5px;
+        @include media-breakpoint-down(xs) {
+            width: 45%!important;
+        }
     }
     
     
@@ -228,12 +273,18 @@ h1.section-title.centered{
 .empty{
     background-size:cover; 
     width: 100%; 
-    height: 50em; 
+    height: 50em;
+    @include media-breakpoint-down(xs) {
+        height: 20em!important;
+    } 
 }
 .sm-empty{
     background-size:cover; 
     width: 100%; 
     height: auto; 
+    @include media-breakpoint-down(md) {
+        height: 20em;
+    }
 } 
 .columned{
     display: flex;
@@ -245,6 +296,9 @@ h1.section-title.centered{
 }
 .content{
     padding: 5em 0px;
+    @include media-breakpoint-down(xs) {
+        padding: 5em 2em;
+    }
 }
 .service-list{
     list-style: none;
@@ -252,6 +306,10 @@ h1.section-title.centered{
     margin-top:30px ;
     p{
         margin: 5px;
+    }
+    @include media-breakpoint-down(md) {
+        text-align: center;
+        border-right:4px solid $primary;
     }
 }
 .actualites-bg{
@@ -377,7 +435,7 @@ h1.section-title.centered{
 .section {
     padding: 100px 0;
     @include media-breakpoint-down(xs) {
-        padding: 60px 0;
+        padding: 30px 0px;
     }
 }
 
@@ -420,6 +478,15 @@ h1.section-title.centered{
 #page-wrapper.wrapper{
     padding: 0px;
 }
+.add-to-cart-container{
+    display: none!important;
+    visibility: hidden!important;
+}
+.star-rating{
+    display: none!important;
+    visibility: hidden!important;
+}
+
 .product-section {
     .product {
         height: 100%;
@@ -605,6 +672,9 @@ a.service-btn{
     position:relative;
     max-width: 350px;
     min-height: 419px;
+    h2{
+        margin-bottom: 96px;
+    }
     a.category-chevron{
         position:absolute;
         bottom: 0px;
@@ -613,6 +683,7 @@ a.service-btn{
             background-color: $primary;
             width: 80px;
             height:80px;
+            text-align: center;
             @include media-breakpoint-down(xs) {
             }
             
@@ -620,6 +691,7 @@ a.service-btn{
                 color: $white;
                 font-size: 35px;
                 margin: 20px 0;
+                text-align: center;
             }
         }
     }
@@ -650,8 +722,9 @@ a.service-btn{
     @include media-breakpoint-down(md) {
 		font-size: 28px;
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
 		font-size: 28px;
+        text-align: center;
     }
 }
 img.wp-post-image {
@@ -678,5 +751,14 @@ img.wp-post-image {
     border-radius: 0px 38px 38px 0px;
 }
 .woocommerce-Price-amount.amount{
-    display: none;
+    display: none!important;
+    visibility: hidden!important;
+}
+.onsale{
+    display: none!important;
+    visibility: hidden!important;
+}
+.woocommerce-tabs.wc-tabs-wrapper{
+    display: none!important;
+    visibility: hidden!important;
 }

@@ -1,7 +1,18 @@
 <?php
+/**
+ * error site under construction setup
+ *
+ * @package UnderStrap
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+$container = get_theme_mod( 'understrap_container_type' );
+
 function hero_content($tag,$header,$emp,$details){
     echo "<div class='row hero-row'>
-    <div class='col-12 col-md-8 col1'>
+    <div class='col-12 col-md-7 col1'>
         <p class='sm-title'>";
     echo $tag;
     echo "</p><div class='sm-title-dash'></div>
@@ -11,7 +22,7 @@ function hero_content($tag,$header,$emp,$details){
     echo $emp;
     echo "</span></h1>  
     </div>
-    <div class='col-12 col-md-4 col2'>
+    <div class='col-12 col-md-5 col2'>
         <br/>
         <p class='hero-text'>";
     echo $details;
@@ -23,13 +34,13 @@ function hero_content($tag,$header,$emp,$details){
 
 
 function prestations_section($sectionTag,$sectionTitle,$sectionContent,$serviceItem1,$serviceItem2,$serviceItem3,$serviceItem4,$serviceItem5,$serviceItem6,$section_side_img_1,$section2Title,$section2Content){
-    echo '<div class="container section">
+    echo '</div><div class="container section">
     <div class="row container columned">
         <div><p class="sm-title">'; echo $sectionTag; echo '</p><div class="sm-title-dash"></div></div><div><br/>
         <h1 class="section-title">';echo $sectionTitle; echo'</h1></div>
     </div>
     <div class="row">
-        <div class="col-md-6 col-12 content">
+        <div class="col-md-6 content">
             <p>';echo $sectionContent; echo'</p>
             <ul class="service-list">
                 <li><p>';echo $serviceItem1; echo'</p></li>
@@ -47,7 +58,7 @@ function prestations_section($sectionTag,$sectionTitle,$sectionContent,$serviceI
             </ul>
 
         </div>
-        <div class="col-md-6 col-12 sm-empty" style="background-image: url(';echo $section_side_img_1; echo');">     
+        <div class="col-md-6 sm-empty" style="background-image: url(';echo $section_side_img_1; echo');">     
         </div>
     </div>
     <div class="section">

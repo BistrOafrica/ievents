@@ -80,8 +80,14 @@
         }
     }
     .footer-brand{
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
         .img-fluid{
             width: 155px;
+            @include media-breakpoint-down(md) {
+                margin: 0px auto;
+            }
         }
         .footer-text{
             font-family: $Lato;
@@ -92,11 +98,15 @@
             color: $ievents-dark;
             margin: 20px 0 40px;
             width: 80%;
+            @include media-breakpoint-down(md) {
+                margin: 20px auto;
+            }
 
         }
         .fa{
             color: $primary;
             font-size: 25px;
+            
         }
     }
     .footer-top-wrapper{
