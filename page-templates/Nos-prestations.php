@@ -27,7 +27,11 @@ $container = get_theme_mod( 'understrap_container_type' );
                     
                     <?php
                         require_once(get_template_directory().'/global-templates/functional_content.php');
-                        hero_content(get_option('tag_header_np'),get_option('hero_header_np'),get_option('header_emp_np'),get_option('hero_details_np'));
+                        hero_content(
+                            get_option('tag_header_np'),
+                            get_option('hero_header_np'),
+                            get_option('header_emp_np'),
+                            get_option('hero_details_np'));
                         get_template_part('global-templates/hero');
                         prestation_services();
                         prestations_section(

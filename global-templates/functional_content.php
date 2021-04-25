@@ -61,7 +61,7 @@ function prestations_section($sectionTag,$sectionTitle,$sectionContent,$serviceI
             <div class="col-md-6 custom-categories">
                 <div class="row">';
 
-            $product_categories = get_terms( 'product_cat', 'hide_empty=0' );
+            $product_categories = get_terms( 'product_cat', 'hide_empty=1' );
             if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
             foreach ( $product_categories as $category ) {    
                 echo '<div class="col-md-4"> <a href="';
