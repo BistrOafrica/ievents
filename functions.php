@@ -1709,4 +1709,60 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+function contact(){?>
+
+    <?php
+      if(isset($_REQUEST['contact_btn'])){        
+          
+        $to      = get_bloginfo('admin_email');
+        $phone = $_REQUEST['phone'];
+        $message = $_REQUEST['message'];
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+        $headers .= 'From:'. $_REQUEST['email'] . "\r\n".
+                  'Reply-To: ' . "\r\n" .
+                          'X-Mailer: PHP/' . phpversion();
+        $headers .= 'Bcc: ' . "\r\n";        
+        $subject="Contact";
+        $message="Name: ".$_REQUEST['name']."<br>Phone: ".$phone."<br> ".$message;              
+        
+
+        wp_mail( $to, $subject, $message, $headers, '' );
+
+        // if(mail($to, $subject, $message, $headers))echo"<p style='color:#008000;'> Thank you </p>";
+         }
+      unset($_POST);
+        ?>
+<div style="padding:10px">
+   
+     <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="form-control" >
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+             <input type="email" name="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>    
+            <textarea  name="message" class="form-control"></textarea> 
+        </div>
+     <input type="submit" name="contact_btn" value="SUBMIT" class="btn btn-primary">
+     </form>
+</div>               
+
+<?php 
+}
+
+add_shortcode( 'contact-frm', 'contact');
 ?>
