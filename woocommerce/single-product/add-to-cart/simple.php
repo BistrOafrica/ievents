@@ -27,7 +27,7 @@ echo wc_get_stock_html( $product ); // phpcs:ignore WordPress.Security.EscapeOut
 
 if ( $product->is_in_stock() ) : ?>
 <div>
-	<a class="btn btn-primary" href="#">Demande de devis</a>
+	<a class="btn btn-primary" href="<?php echo get_permalink( get_page_by_path( 'quote' ) ); ?>">Demande de devis</a>
 </div>
 	<?php
 endif;

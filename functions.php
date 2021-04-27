@@ -1725,7 +1725,7 @@ function contact(){?>
                   'Reply-To: ' . "\r\n" .
                           'X-Mailer: PHP/' . phpversion();
         $headers .= 'Bcc: ' . "\r\n";        
-        $subject="Contact";
+        $subject="Quote";
         $message="Name: ".$_REQUEST['name']."<br>Phone: ".$phone."<br> ".$message;              
         
 
@@ -1757,7 +1757,7 @@ function contact(){?>
             <label for="message">Message:</label>    
             <textarea  name="message" class="form-control"></textarea> 
         </div>
-     <input type="submit" name="contact_btn" value="SUBMIT" class="btn btn-primary">
+        <input type="submit" name="contact_btn" value="SUBMIT" class="btn btn-primary">
      </form>
 </div>               
 
@@ -1765,4 +1765,23 @@ function contact(){?>
 }
 
 add_shortcode( 'contact-frm', 'contact');
+
+function create_page($page_name,$content,$template){
+     if(get_page_by_title($page_name)==NULL|| get_post_status( get_page_by_title($page_name) )=="trash") {
+
+         $my_post = array(
+          'post_title'    => $page_name,
+          'post_content'  =>$content,         
+          'post_status'   => 'publish',      
+          'post_type'     =>'page',
+          'comment_status' =>'closed',
+          'page_template'  =>$template        
+        );
+        $post_id = wp_insert_post( $my_post);
+        
+        
+    } 
+        
+ }
+  create_page("Quote","[contact-frm]","page-templates/both-sidebarspage.php");  
 ?>
