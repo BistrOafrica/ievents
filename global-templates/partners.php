@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-<div class="section">
+<div class="wrapper-partners">
   <div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
     <h1 class="section-title">Nos partenaires</h1>
     <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim</p>

@@ -75,4 +75,8 @@
 }
 .page-header{
     margin-bottom: 70px;
+    height: 600px;
+    @include media-breakpoint-down(xs) {
+        height: 250px;
+    }
 }

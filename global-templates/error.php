@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="section">
 <section class="error-404 not-found">
 
-<header class="page-header">
+<header class="error-header">
 
 <h1 class="page-title"><?php esc_html_e( 'Oops! There&rsquo;s nothing here yet!.', 'ievents' ); ?></h1>
 <h1 class="page-title"><?php esc_html_e( 'Site Still Under Construction!', 'ievents' ); ?></h1>

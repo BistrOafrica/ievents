@@ -44,7 +44,7 @@ img.wp-post-image {
     p{
         font-family:$body-font;
         font-size: 16px;
-        font-weight: 300px;
+        font-weight: 300;
         color: $primary;
         text-align: justify;
         hyphens: none;
@@ -88,13 +88,13 @@ h1 {
     }
 }
 p{
+
     font-family: $body-font;
-    font-weight: 300;
     font-style: normal;
     font-size: 16px;
     text-align: left;
     color: $ievents-dark;
-    line-height: 135%;
+    line-height: 22px;
     @include media-breakpoint-down(md) {
 		font-size: 14px;
     }
@@ -179,10 +179,12 @@ h3 {
     width: 100%;
     padding:0px;
     margin:0px;
+    height:600px;
     .contnt{
         display: flex;
         flex-flow: row-reverse;
         justify-content:flex-end;
+        height: 600px;
         @include media-breakpoint-down(xs) {
             order: 2!important;
             justify-content: center;
@@ -230,7 +232,7 @@ h3 {
     .empty{
         background-size:cover; 
         width: 100%; 
-        height: 50em; 
+        height:600px; 
         @include media-breakpoint-down(xs) {
             height: 20em!important;
             order: 1!important;
@@ -245,7 +247,9 @@ h3 {
 h1.section-title.centered{
     text-align: center!important;
 }
-
+.wrapper.community{
+    padding: 0;
+}
 .community-widget.widget_media_gallery{
     width: 100%!important;
     margin: 0 0 120px 0;
@@ -278,7 +282,11 @@ h1.section-title.centered{
 }
 .custom-categories{
     h1{
-        font-size: 22px;
+        font-family: $bold-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 31px;
         color: $ievents-dark;
         margin: 0px;
         padding: 0px;
@@ -300,7 +308,7 @@ h1.section-title.centered{
 .empty{
     background-size:cover; 
     width: 100%; 
-    height: 50em;
+    height: 600px;
     @include media-breakpoint-down(xs) {
         height: 20em!important;
     } 
@@ -503,6 +511,29 @@ h1.section-title.centered{
     .about-img {
         position: relative;
         z-index: 1;
+    }
+}
+.wrapper-partners{
+    margin: 120px 0px;
+    height: 250px ;
+    .section-title{
+        font-family:$bold-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 41px;
+        margin: 0 0 30px;
+        padding: 0px;
+    }
+    .section-text{
+        padding: 0px;
+        margin: 0 0 30px;
+    }
+    .owl-stage-outer{
+        margin: 0 0 10px;
+    }
+    .owl-nav{
+        display: none;
     }
 }
 #page-wrapper.wrapper{
@@ -757,7 +788,7 @@ a.service-btn{
 }
 .sm-title-dash{
     background-color: $ievents-dark;
-    width: 60px;
+    width: 73px;
     height: 1px;
     margin: 3px 20px;
     display: inline-block;

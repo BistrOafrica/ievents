@@ -15,18 +15,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="wrapper" id="page-wrapper">
-</div>
-<div class="page-header" style="background: url('<?php  
-				echo get_the_post_thumbnail_url();
-				?>'); background-size: cover; background-repeat: no-repeat; background-position-y: center; min-height:500px">
-                </div><br/><br/><br/><br/>
-<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
+<div id="full-width-page-wrapper">
 
-<?php get_template_part( 'global-templates/actualites'); ?>
+	<div id="content">
 
+			<div class="content-area" id="primary">
 
-
+				<main class="site-main" id="main" role="main">
+                <div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
+                    
+                    
+                    <?php
+                        require_once(get_template_directory().'/global-templates/functional_content.php');
+                        hero_content(
+                            get_option('tag_header_ap'),
+                            get_option('hero_header_ap'),
+                            get_option('header_emp_ap'),
+                            get_option('hero_details_ap'));
+                        get_template_part('global-templates/hero');
+						get_template_part( 'global-templates/actualites');
+					?>
+					</div>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'prefooter' ); ?>
 <?php 

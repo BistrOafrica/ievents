@@ -1258,6 +1258,148 @@ function hero_header(){
     </fieldset>
 </div>
 </div>
+
+<div class="row">
+<h2> Societe Page</h2>
+<div class="col-md-3">
+    <fieldset>
+        <legend>Tag Heading</legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Tag Heading</label>
+
+        <input type="text" name="tag_header_sp" value="<?php echo get_option('tag_header_sp');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div> 
+     
+         </div>
+
+    </fieldset>
+
+</div>
+
+<div class="col-md-3 ">
+    <fieldset>
+        <legend>Main-Heading</legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Main Heading</label>
+
+        <input type="text" name="hero_header_sp" value="<?php echo get_option('hero_header_sp');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+<div class="col-md-3 ">
+    <fieldset>
+        <legend>Heading Emphasis <i>(The Heading Emphasis will apear in pink as part of your heading. It is Optional)</i></legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Heading Emphasis</label>
+
+        <input type="text" name="header_emp_sp" value="<?php echo get_option('header_emp_sp');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+
+<div class="col-md-3 ">
+    <fieldset>
+        <legend>Hero Details</legend>
+            
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Details1</label>
+       
+        <textarea name="hero_details_sp" class="form-control" autocomplete="off">
+        <?php echo get_option('hero_details_sp');?>
+         </textarea> 
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+</div>
+</div>
+
+
+<div class="row">
+<h2> Actualites Page </h2>
+<div class="col-md-3">
+    <fieldset>
+        <legend>Tag Heading</legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Tag Heading</label>
+
+        <input type="text" name="tag_header_ap" value="<?php echo get_option('tag_header_ap');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div> 
+     
+         </div>
+
+    </fieldset>
+
+</div>
+
+<div class="col-md-3 ">
+    <fieldset>
+        <legend>Main-Heading</legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Main Heading</label>
+
+        <input type="text" name="hero_header_ap" value="<?php echo get_option('hero_header_ap');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+<div class="col-md-3 ">
+    <fieldset>
+        <legend>Heading Emphasis <i>(The Heading Emphasis will apear in pink as part of your heading. It is Optional)</i></legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Heading Emphasis</label>
+
+        <input type="text" name="header_emp_ap" value="<?php echo get_option('header_emp_ap');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+
+<div class="col-md-3 ">
+    <fieldset>
+        <legend>Hero Details</legend>
+            
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Details1</label>
+       
+        <textarea name="hero_details_ap" class="form-control" autocomplete="off">
+        <?php echo get_option('hero_details_ap');?>
+         </textarea> 
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+</div>
+</div>
+
         <hr>
         <div class="form-actions">
             <button type="submit" class="btn btn-primary" name="hero_btn">Submit</button>
@@ -1290,6 +1432,18 @@ function hero_header(){
         $hero_header_cp= $_REQUEST["hero_header_cp"];
         $header_emp_cp= $_REQUEST["header_emp_cp"];
         $hero_details_cp = $_REQUEST["hero_details_cp"];
+
+        $tag_header_sp=$_REQUEST["tag_header_sp"];
+        $hero_header_sp= $_REQUEST["hero_header_sp"];
+        $header_emp_sp= $_REQUEST["header_emp_sp"];
+        $hero_details_sp = $_REQUEST["hero_details_sp"];
+
+        $tag_header_ap=$_REQUEST["tag_header_ap"];
+        $hero_header_ap= $_REQUEST["hero_header_ap"];
+        $header_emp_ap= $_REQUEST["header_emp_ap"];
+        $hero_details_ap = $_REQUEST["hero_details_ap"];
+
+
 
         
 
@@ -1332,6 +1486,34 @@ function hero_header(){
 
         add_option('hero_details_cp',$hero_details_cp,'','yes');
         update_option('hero_details_cp',$hero_details_cp);
+
+
+
+        add_option('tag_header_sp',$tag_header_sp,'','yes');
+        update_option('tag_header_sp',$tag_header_sp);
+
+        add_option('hero_header_sp',$hero_header_sp,'','yes');
+        update_option('hero_header_sp',$hero_header_sp);
+
+        add_option('header_emp_sp',$header_emp_sp,'','yes');
+        update_option('header_emp_sp',$header_emp_sp);
+
+        add_option('hero_details_sp',$hero_details_sp,'','yes');
+        update_option('hero_details_sp',$hero_details_sp);
+
+
+
+        add_option('tag_header_ap',$tag_header_ap,'','yes');
+        update_option('tag_header_ap',$tag_header_ap);
+
+        add_option('hero_header_ap',$hero_header_ap,'','yes');
+        update_option('hero_header_ap',$hero_header_ap);
+
+        add_option('header_emp_ap',$header_emp_ap,'','yes');
+        update_option('header_emp_ap',$header_emp_ap);
+
+        add_option('hero_details_ap',$hero_details_ap,'','yes');
+        update_option('hero_details_ap',$hero_details_ap);
     }
 
 
