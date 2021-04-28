@@ -22,17 +22,20 @@
     width: 100%;
     height: 5px;
     background-color: $primary;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 .hero-row{
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 50px;
     .col1{
         .hero-header{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 46px;
+            line-height: 55px;
             font-family:$bold-font;
             color: $primary;
-            font-size:46px;
-            font-weight: 700;
             span{
                 color: $ievents-pink;
             }
@@ -65,4 +68,11 @@
     }
     
     
+}
+.hero-text{
+    text-align: justify!important;
+    margin: 20px 0 0 auto;
+}
+.page-header{
+    margin-bottom: 70px;
 }

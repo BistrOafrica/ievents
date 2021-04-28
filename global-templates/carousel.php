@@ -25,12 +25,20 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="carousel-item active">
             <img src="<?php echo get_option('slide_img_3');?>">
         </div>
+
+        <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item active">
+            <img src="<?php echo get_option('slide_img_4');?>">
+        </div>
+
+        <label for="carousel-4" class="carousel-control prev control-1">‹</label>
         <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-        <label for="carousel-2" class="carousel-control next control-1">›</label>
+        <label for="carousel-2" class="carousel-control next control-2">›</label>
         <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-        <label for="carousel-3" class="carousel-control next control-2">›</label>
-        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-        <label for="carousel-1" class="carousel-control next control-3">›</label>
+        <label for="carousel-4" class="carousel-control prev control-3">‹</label>
+        <label for="carousel-3" class="carousel-control next control-3">›</label>
+        <label for="carousel-2" class="carousel-control prev control-4">‹</label>
+        <label for="carousel-1" class="carousel-control next control-4">›</label>
         <ol class="carousel-indicators">
             <li>
                 <label for="carousel-1" class="carousel-bullet">.</label>
@@ -40,6 +48,9 @@ $container = get_theme_mod( 'understrap_container_type' );
             </li>
             <li>
                 <label for="carousel-3" class="carousel-bullet">.</label>
+            </li>
+            <li>
+                <label for="carousel-4" class="carousel-bullet">.</label>
             </li>
         </ol>
     </div>

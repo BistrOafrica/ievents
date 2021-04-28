@@ -5,8 +5,10 @@
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^10.2.5",
+    "bootstrap": "^4.6.0",
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
+    "feather-icons": "^4.28.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
@@ -17,7 +19,7 @@
     "gulp-uglify": "^3.0.2",
     "karma-sinon-chai": "^2.0.2",
     "postcss": "^8.2.10",
-    "sass": "^1.32.10",
+    "sass": "^1.32.11",
     "scss": "^0.2.4"
   },
   "devDependencies": {

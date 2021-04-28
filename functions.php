@@ -121,7 +121,7 @@ function setup_slider(){
 
  <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post" enctype="multipart/form-data">
         
-<div class="col-md-4 ">
+<div class="col-md-3 ">
     <fieldset>
         <legend>Slide 1</legend>
         <div class="form-group form-md-line-input">
@@ -151,7 +151,7 @@ function setup_slider(){
 
 </div>
 
-<div class="col-md-4 ">
+<div class="col-md-3 ">
     <fieldset>
         <legend>Slide 2</legend>
         <div class="form-group form-md-line-input">
@@ -181,7 +181,7 @@ function setup_slider(){
 
 
 
-<div class="col-md-4 ">
+<div class="col-md-3 ">
     <fieldset>
         <legend>Slide 3</legend>
         <div class="form-group form-md-line-input">
@@ -200,6 +200,33 @@ function setup_slider(){
        
         <textarea name="slide_intro_3" class="form-control" autocomplete="off">
         <?php echo get_option('slide_intro_3');?>
+         </textarea> 
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+</div>
+
+<div class="col-md-3 ">
+    <fieldset>
+        <legend>Slide 4</legend>
+        <div class="form-group form-md-line-input">
+            <label class="control-label">Image</label>
+        <?php
+        if(get_option('slide_img_4')!="")
+        echo "<img src='". get_option('slide_img_4')."' style='margin:auto;width:100%'/>";
+        ?>
+            
+        <input type="file" name="slide_img_4" value="" class="form-control" autocomplete="off">
+        <div class="form-control-focus"> </div>
+          
+        </div>      
+         <div class="form-group form-md-line-input">
+        <label class=" control-label">Intro Text</label>
+       
+        <textarea name="slide_intro_4" class="form-control" autocomplete="off">
+        <?php echo get_option('slide_intro_4');?>
          </textarea> 
             <div class="form-control-focus"> </div>
      
@@ -230,6 +257,7 @@ function setup_slider(){
         $slide_intro_1 = $_REQUEST["slide_intro_1"];
         $slide_intro_2 = $_REQUEST["slide_intro_2"];
         $slide_intro_3 = $_REQUEST["slide_intro_3"];
+        $slide_intro_4 = $_REQUEST["slide_intro_4"];
         
 
         add_option('slide_intro_1',$slide_intro_1,'','yes');
@@ -240,6 +268,9 @@ function setup_slider(){
 
         add_option('slide_intro_3',$slide_intro_3,'','yes');
         update_option('slide_intro_3',$slide_intro_3);
+
+        add_option('slide_intro_4',$slide_intro_4,'','yes');
+        update_option('slide_intro_4',$slide_intro_4);
 
                
         require_once(ABSPATH . "wp-admin" . '/includes/image.php');

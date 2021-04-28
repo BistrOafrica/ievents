@@ -29,7 +29,8 @@ $black: #000 !default;
 $body-font: 'Swis721 Lt BT', sans-serif;
 $bold-font: 'Swis721 BT', sans-serif;
 $Lato:'Lato', sans-serif;
-$shadow: 0px 4px 16px rgba(255, 87, 34, 0.32);;
+$shadow: 0px 4px 16px rgba(255, 87, 34, 0.32);
+$shadow_body: 0px 4px 16px rgba(53, 53, 53, 0.082);
 $cutout-size: 1rem;
 
 // Spacing
@@ -64,7 +65,7 @@ $container-max-widths: (
   sm: 540px,
   md: 750px,
   lg: 980px,
-  xl: 1200px
+  xl: 1110px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");

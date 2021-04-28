@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					get_option('header_emp_cp'),
 					get_option('hero_details_cp'));
 					
-					echo '<div class="row section category-section" >';
+					echo '<div class="row category-section" >';
 
 					$product_categories = get_terms( 'product_cat','orderby = date', 'order= DESC', 'hide_empty=1' );
 					if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
