@@ -80,7 +80,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						?>
 					</div>
 					<div class="col-md-3 col-2 nav-button">
-					<a class="nav-btn btn btn-primary" href="#">Contactez-Nous</a>
+					<a class="nav-btn btn btn-primary" href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) );?>">Contactez-Nous</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'ievents' ); ?>">
 							<span class="navbar-toggler-icon"></span>
 					</button>

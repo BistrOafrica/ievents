@@ -124,7 +124,7 @@ function prestation_services(){?>
                     <h1 class="section-title"><?php echo get_option('service_header_1');?></h1>
                     <p><?php echo get_option('service_details_1');?></p>
         
-                    <a class="btn btn-primary long-btn">Contactez-nous</a></div>
+                    <a href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) );?>" class="btn btn-primary long-btn">Contactez-nous</a></div>
                 </div>
                 <div class="col-md-6 col-12 empty" style="background-image: url(<?php echo get_option('service_img_1');?>); order:2;">
         
@@ -137,7 +137,7 @@ function prestation_services(){?>
                     <h1 class="section-title"><?php echo get_option('service_header_2');?></h1>
                     <p><?php echo get_option('service_details_2');?></p>
         
-                    <a class="btn btn-primary long-btn">Contactez-nous</a></div>
+                    <a href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) );?>" class="btn btn-primary long-btn">Contactez-nous</a></div>
                 </div>
                 <div class="col-md-6 col-12 empty" style="background-image: url(<?php echo get_option('service_img_2');?>); order:1;">
         
@@ -150,7 +150,7 @@ function prestation_services(){?>
                     <h1 class="section-title"><?php echo get_option('service_header_3');?></h1>
                     <p><?php echo get_option('service_details_3');?></p>
         
-                    <a class="btn btn-primary long-btn">Contactez-nous</a></div>
+                    <a href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) );?>" class="btn btn-primary long-btn">Contactez-nous</a></div>
                 </div>
                 <div class="col-md-6 col-12 empty" style="background-image: url(<?php echo get_option('service_img_3');?>); order:2;">
         

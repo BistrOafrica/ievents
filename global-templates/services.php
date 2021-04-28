@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="service-card1" style="background-image: url(<?php echo get_option('service_img_1');?>); background-size:cover;">
             <a href="http://doctaroo.fr/sites/ievents/services/" class="service-chevron">
             <div class="service-link">
-                <i class="fa" data-feather="chevron-right"></i>
+                <i class="fa fa-chevron-right"></i>
             </div> </div></a>
             <p class="section-title"><?php echo get_option('service_header_1');?></p>
             
@@ -48,6 +48,6 @@ $container = get_theme_mod( 'understrap_container_type' );
             
         </div>
     </div>
-    <a href="#" class="btn btn-primary service-btn">Découvrez nos prestations</a>
+    <a href="<?php echo get_permalink( get_page_by_path( 'services' ) ) ?>" class="btn btn-primary service-btn">Découvrez nos prestations</a>
 </div>
 </div>

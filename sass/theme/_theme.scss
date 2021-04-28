@@ -7,6 +7,9 @@ body {
     margin: 0px auto;
     font-family: $body-font;
     box-shadow:$shadow_body;
+    @include media-breakpoint-down(xs) {
+       width: 100%;
+    }
     p{
         color: $gray-600;
         font-family: $Lato;
@@ -15,7 +18,7 @@ body {
         font-size: 20px; 
         line-height: 30px;
         width: 90%;
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(xs) {
             padding: 10px;
             text-align: center;
         }
@@ -680,6 +683,9 @@ h1.section-title.centered{
         background-repeat: no-repeat;
         background-clip: border-box;
         background-position: top;
+        @include media-breakpoint-down(xs) {
+            width: 90vw;
+        }
     }
     .service-card2{
         position: relative;
@@ -688,6 +694,9 @@ h1.section-title.centered{
         background-repeat: no-repeat;
         background-clip: border-box;
         background-position: top;
+        @include media-breakpoint-down(xs) {
+            width: 90vw;
+        }
     }
     .service-card3{
         position: relative;
@@ -696,6 +705,9 @@ h1.section-title.centered{
         background-repeat: no-repeat;
         background-clip: border-box;
         background-position: top;
+        @include media-breakpoint-down(xs) {
+            width: 90vw;
+        }
     }
     .section-title{
         font-style: normal;
