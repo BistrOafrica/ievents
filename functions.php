@@ -1919,9 +1919,9 @@ function lay_featured_image() {
 
 
 function custom_excerpt_length( $length ) {
-	return 20;
+	return;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'custom_excerpt_length', 150 );
 
 
 function contact(){?>
@@ -1983,7 +1983,6 @@ function contact(){?>
                echo "&#13;&#10;Product ID:".$_REQUEST['pid'];
                echo "&#13;&#10;Product name:".$product->get_name();
                echo "&#13;&#10;Product SKU:".$product->get_sku();
-               echo "&#13;&#10;Short Description:".$product->get_short_description();
              }
             ?>   
 
