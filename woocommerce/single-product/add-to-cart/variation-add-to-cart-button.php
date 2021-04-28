@@ -12,5 +12,5 @@ defined( 'ABSPATH' ) || exit;
 global $product;
 ?>
 <div>
-	<a class="btn btn-primary" href="<?php echo get_permalink( get_page_by_path( 'quote' ) ); ?>">Demande de devis</a>
+	<a class="btn btn-primary" href="<?php echo get_permalink( get_page_by_path( 'quote' ) )."?pid=".$product->get_id(); ?>">Demande de devis</a>
 </div>

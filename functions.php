@@ -1757,21 +1757,30 @@ function contact(){?>
                           'X-Mailer: PHP/' . phpversion();
         $headers .= 'Bcc: ' . "\r\n";        
         $subject="Quote";
-        $message="Name: ".$_REQUEST['name']."<br>Phone: ".$phone."<br> ".$message;              
+        $message="Name: ".$_REQUEST['customer_name']."<br>Phone: ".$phone."<br> ".$message;              
         
 
-        wp_mail( $to, $subject, $message, $headers, '' );
+        echo wp_mail( $to, $subject, $message, $headers);
 
-        // if(mail($to, $subject, $message, $headers))echo"<p style='color:#008000;'> Thank you </p>";
+
+        // if(wp_mail( $to, $subject, $message, $headers, '' ))echo"<p style='color:#008000;'> Thank you </p>";
          }
       unset($_POST);
         ?>
 <div style="padding:10px">
-   
+
+    <pre>
+
+    <?php
+
+    $pf = new WC_Product_Factory(); 
+    $product = $pf->get_product($_REQUEST['pid']);
+      ?>
+   </pre>
      <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post">
         <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" name="name" class="form-control" >
+            <input type="text" name="customer_name" class="form-control" >
         </div>
 
         <div class="form-group">
@@ -1786,7 +1795,17 @@ function contact(){?>
 
         <div class="form-group">
             <label for="message">Message:</label>    
-            <textarea  name="message" class="form-control"></textarea> 
+            <textarea  name="message" class="form-control" rows="6">
+             <?php
+             if(isset($_REQUEST['pid'])){
+               echo "&#13;&#10;Product ID:".$_REQUEST['pid'];
+               echo "&#13;&#10;Product name:".$product->get_name();
+               echo "&#13;&#10;Product SKU:".$product->get_sku();
+               echo "&#13;&#10;Short Description:".$product->get_short_description();
+             }
+            ?>   
+
+            </textarea> 
         </div>
         <input type="submit" name="contact_btn" value="SUBMIT" class="btn btn-primary">
      </form>
