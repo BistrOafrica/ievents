@@ -86,8 +86,7 @@ function prestations_section($sectionTag,$sectionTitle,$sectionContent,$serviceI
                 echo '
             <div class="col-md-4"> 
                 <a href="';echo esc_url( get_term_link( $category ) );echo'">
-                    <h1>';echo esc_html( $category->name );echo '</h1>
-                    <p>';echo esc_html($category->description);echo '</p>';echo '
+                    <h1>';echo esc_html( $category->name );echo '</h1>';echo '
                 </a>
             </div>';
                 }
