@@ -31,8 +31,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<p class="footer-text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet.
 					</p>
-					<i class="fa fa-instagram"></i>
-					<i class="fa fa-facebook-square"></i>
+					<a href="<?php echo get_option('instagram');?>"><i class="fa fa-instagram"></i></a>
+					<a href="<?php echo get_option('facebook');?>"><i class="fa fa-facebook-square"></i></a>
 				</div>
 				<div class="col-md-9 footer-widgets">
 					<?php dynamic_sidebar( 'footerfull' ); ?>

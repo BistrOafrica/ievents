@@ -82,6 +82,7 @@ function customize_components() {
     add_submenu_page('landing','Services', 'Services','manage_options','services','services');
     add_submenu_page('landing','Nos Équipes', 'Nos Équipes','manage_options','nos_equipes','nos_equipes');
     add_submenu_page('landing','Prefooter', 'Prefooter','manage_options','pre_footer','pre_footer');
+    add_submenu_page('landing','SocialMedia', 'SocialMedia','manage_options','social_media','social_media');
     
 }
 
@@ -1859,6 +1860,117 @@ function nos_equipes(){
 
 
 }
+function social_media(){
+    ?>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style type="text/css">
+    fieldset {
+     
+      padding:10px !important;
+      border:1px solid #E8E7E6  !important;
+    }
+
+    legend { 
+     
+      font-size:16px !important;
+      text-transform:uppercase;
+      text-align: center;
+    }
+
+   .postbox{
+
+    margin:50px;
+    padding:50px;
+    padding-bottom:20px;
+
+   } 
+   img{
+       width:300px!important;
+       height:auto;
+   }
+
+</style>
+
+
+            
+<div class="postbox">
+<div class="form-body row">
+<form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post" enctype="multipart/form-data">
+
+<div class="col-md-6">
+    <fieldset>
+        <legend>Facebook Link </legend>
+           
+         <div class="form-group form-md-line-input"><i class="fa fa-facebook-square"></i>
+        <label class=" control-label">Facebook</label>
+
+        <input type="text" name="facebook" value="<?php echo get_option('facebook');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+     
+         </div>
+
+    </fieldset>
+
+</div>
+<div class="col-md-6">
+    <fieldset>
+        <legend>Instagram Link </legend>
+           
+         <div class="form-group form-md-line-input">
+        <label class=" control-label"><i class="fa fa-Instagram"></i>Instagram</label>
+
+        <input type="text" name="instagram" value="<?php echo get_option('instagram');?>" class="form-control" autocomplete="off">
+       
+            <div class="form-control-focus"> </div>
+      
+         </div>
+
+    </fieldset>
+
+</div>
+
+
+</div>
+
+        <hr>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary" name="social_btn">Submit</button>
+        </div>
+
+</form>
+
+</div>
+
+
+<?php
+
+
+    if(isset($_REQUEST["social_btn"]))
+    {
+    
+       
+        $facebook = $_REQUEST["facebook"];
+        $instagram = $_REQUEST["instagram"];
+
+        
+        
+        
+        add_option('facebook',$facebook,'','yes');
+        update_option('facebook',$facebook);
+
+        add_option('instagram',$instagram,'','yes');
+        update_option('instagram',$instagram);
+    }
+
+
+}
+
+
+
+
 function wpb_login_logo() { ?>
     <style type="text/css">
     .login {

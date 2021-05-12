@@ -33,7 +33,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                             get_option('header_emp_sp'),
                             get_option('hero_details_sp'));
                         get_template_part('global-templates/hero');
-						get_template_part( 'global-templates/error');
+						if (have_posts()){
+                            while ( have_posts() ) {
+                                the_post();
+                                get_template_part( 'loop-templates/content', 'noimg' );
+            
+                            }
+        
+                        }
+                        else{
+                            get_template_part('global-templates/error');
+                        }
 					?>
 					</div>
 

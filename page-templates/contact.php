@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				    if (have_posts()){
 					while ( have_posts() ) {
 						the_post();
-						get_template_part( 'loop-templates/content', 'contact' );
+						get_template_part( 'loop-templates/content', 'noimg' );
 	
 					}
 
