@@ -82,7 +82,7 @@ h1 {
     }
     &.section-title {
         text-align: left;
-        text-transform: capitalize;
+        text-transform: none;
         padding: 0 0 $spacing-lg 0;
         margin-bottom: 25px!important;
         @include media-breakpoint-down(md) {
