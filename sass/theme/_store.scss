@@ -33,11 +33,19 @@
         div.images {
             max-height: 600px;
             text-align: center;
-            img {
-                width: auto;
+            a {
+                display: flex;
+                align-items: center;
                 height: 100%;
+                img {
+                    width: auto;
+                    height: 100%;
+                    margin: 0 auto;
+                    object-fit: cover;
+                }
             }
         }
+            
     }
     ul.products {
         li.product {
