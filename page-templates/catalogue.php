@@ -37,16 +37,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 					if ( ! empty( $product_categories ) && ! is_wp_error( $product_categories ) ) {
 					foreach ( $product_categories as $category ) { 
 						$thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id',true);
+						
             			
 						if (wp_get_attachment_url( $thumbnail_id )!=''){
 							$image = wp_get_attachment_url( $thumbnail_id );
+							$placeholderBorder="none";
+
 						}
 						else{
 							$image=get_template_directory_uri().'/img/pholder.jpg';
+							$placeholderBorder="1px solid #f5f5f5";
 						}
+						
 						?>
 						<div class="col-md-4">
-							<div class="category-image" style="background-image:url('<?php echo esc_url( $image );?>');background-size:cover;width: 100%;height: 400px;">
+							<div class="category-image" style="background-image:url('<?php echo esc_url( $image );?>');border:<?php echo $placeholderBorder?>;background-size:cover;width: 100%;height: 400px;">
 								<a class="category-chevron" href="<?php echo esc_url( get_term_link( $category ) ); ?>">
 									<div class="category-link">
 										<i class="fa fa-chevron-right"></i>
